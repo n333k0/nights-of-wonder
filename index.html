@@ -72,6 +72,7 @@ section{padding-top:6rem}
 .mlogo{position:relative; width:70%; max-height:72%; background:currentColor; -webkit-mask:var(--m) center/contain no-repeat; mask:var(--m) center/contain no-repeat; aspect-ratio:var(--ar)}
 .dlogo{position:relative; display:block; width:62%; max-height:80%; overflow:visible}
 .tile img.r3d{position:relative; width:78%; max-height:78%; object-fit:contain; filter:drop-shadow(0 14px 22px rgba(0,0,0,.45))}
+.tile img.r3d.soft{filter:drop-shadow(0 12px 18px rgba(60,30,10,.28))}
 @media (max-width:1100px){.opt{grid-template-columns:1fr}}
 @media (max-width:640px){.tiles{grid-template-columns:1fr} .tiles.two{grid-template-columns:1fr}}
 
@@ -120,8 +121,8 @@ footer .end{display:flex; flex-wrap:wrap; justify-content:space-between; gap:1re
 
 <section id="three-d">
   <div class="sh">
-    <div><p class="eyebrow">3D treatments</p><h2>Chrome and wool.</h2></div>
-    <p>The same names turned into objects, for the campaign hero, video and the keepsake box. Shown on black and on red.</p>
+    <div><p class="eyebrow">3D treatments</p><h2>Champagne, chrome and wool.</h2></div>
+    <p>The same names turned into objects, for the campaign hero, video and the keepsake box. New from your feedback: Warm Holiday Lettering in champagne chrome, shown on the holiday palette of burgundy, tan and warm white.</p>
   </div>
   <div id="dim"></div>
 </section>
@@ -213,6 +214,8 @@ const FLAT = [
   { no: 'N07', name: 'The Soft Season', why: 'Rounded lowercase and a small star, warm enough to knit onto a beanie.', m: 'logos/v2/knit-flat-nights.svg', ar: '702/315', photo: 'pr-sax', alt: 'Saxophonist in the snow' }
 ];
 const DIM = [
+  { no: '3D-3', fresh: true, name: 'Warm Holiday Lettering, champagne chrome', why: 'The N02 script as polished champagne metal: pale gold with warm-white highlights, made for burgundy and velvet.', img: 'img/champagne/n02-champagne-polished.webp',
+    bgs: [['Burgundy', '#5c0c1e', '#fff'], ['Tan', '#c4a47c', '#2a1a10'], ['Warm white', '#f5eee2', '#2a1a10']] },
   { no: '3D-1', name: 'Midnight Sculpture, chrome', why: 'Polished silver lettering. Pairs with the chrome star and velvet ribbon.', img: 'img/old-chrome-nights-hd.webp' },
   { no: '3D-2', name: 'The Soft Season, knit', why: 'Red wool lettering with a felt star; the friendlier of the two.', img: 'img/old-knit-nights-hd.webp' }
 ];
@@ -228,11 +231,11 @@ document.getElementById('flat').innerHTML = FLAT.map(o => `<article class="opt">
     <div class="tile t-black"><span class="tl">Black</span>${mask(o)}</div>
     <div class="tile t-photo"><img class="ph" src="img/${o.photo}.jpg" alt="${o.alt}" loading="lazy"><div class="scrim"></div><span class="tl">Photo</span>${mask(o)}</div>
   </div></article>`).join('');
-document.getElementById('dim').innerHTML = DIM.map(o => `<article class="opt">${info(o, '<span class="tag">3D</span>')}
-  <div class="tiles two">
+document.getElementById('dim').innerHTML = DIM.map(o => `<article class="opt">${info(o, '<span class="tag">3D</span>' + (o.fresh ? '<span class="tag">New</span>' : ''))}
+  ${o.bgs ? `<div class="tiles">${o.bgs.map(([l, bg, fg]) => `<div class="tile" style="background:${bg};color:${fg}"><span class="tl">${l}</span><img class="r3d${fg === '#fff' ? '' : ' soft'}" src="${o.img}" alt="${o.name} on ${l.toLowerCase()}"></div>`).join('')}</div>` : `<div class="tiles two">
     <div class="tile t-black"><span class="tl">Black</span><img class="r3d" src="${o.img}" alt="${o.name}"></div>
     <div class="tile t-red"><span class="tl">Red</span><img class="r3d" src="${o.img}" alt="${o.name}"></div>
-  </div></article>`).join('');
+  </div>`}</article>`).join('');
 
 /* shortlist */
 function syncShort() {
