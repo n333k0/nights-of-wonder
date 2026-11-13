@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nights of Wonder Identity</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..600&family=Federo&family=Marcellus+SC&family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: black stage, hero photo, one row per logo (white / black / photo; 3D on black / red), then mockups */
+:root{
+  --bg:#0a0909; --fg:#f3efe8; --mute:#9b948b; --line:rgba(243,239,232,.13); --panel:#141212;
+  --paper:#ffffff; --ink:#0b0b0c; --red:#5c0c1e; --gold:#e9c77b;
+  --sans:"Geist", "Helvetica Neue", Helvetica, Arial, sans-serif; --mono:"Geist Mono", ui-monospace, Menlo, monospace; --serif:"Bodoni Moda", "Bodoni 72", Didot, Georgia, serif;
+  --gut:max(16px, 4vw); color-scheme:dark;
+}
+html{font-size:clamp(14px, calc(9.5px + .42vw), 24px)}
+body{background:var(--bg); color:var(--fg); font-family:var(--sans); line-height:1.5; -webkit-font-smoothing:antialiased;
+  padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); overflow-x:hidden}
+.bleed{margin-left:calc(-1 * max(16px, env(safe-area-inset-left, 0px))); margin-right:calc(-1 * max(16px, env(safe-area-inset-right, 0px)))}
+.wrap{padding-inline:calc(var(--gut) - 16px)}
+a{color:inherit}
+h1,h2,h3{font-weight:500; letter-spacing:-.02em; text-wrap:balance; margin:0}
+p{margin:0}
+:focus-visible{outline:2px solid var(--gold); outline-offset:3px}
+.eyebrow{font-family:var(--mono); font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--mute)}
+.btn{display:inline-flex; align-items:center; gap:.5em; border:1px solid var(--line); border-radius:999px; padding:.55em 1.1em; font:500 .85rem var(--sans); color:var(--fg); background:transparent; cursor:pointer; text-decoration:none}
+.btn:hover{border-color:var(--fg)}
+.btn.solid{background:var(--fg); color:var(--bg); border-color:var(--fg)}
+
+.nav{position:fixed; z-index:20; left:50%; top:calc(env(safe-area-inset-top,0px) + 14px); transform:translateX(-50%); display:flex; align-items:center; gap:1.4rem; padding:.5rem .6rem .5rem 1.1rem; border-radius:999px; border:1px solid transparent; transition:background .3s, border-color .3s; white-space:nowrap; max-width:calc(100vw - 32px)}
+.nav.on{background:rgba(16,14,14,.72); border-color:var(--line); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px)}
+.nav b{font-weight:600; font-size:.9rem}
+.nav .links{display:flex; gap:1.1rem; font-size:.82rem; color:var(--mute)} .nav .links a{text-decoration:none} .nav .links a:hover{color:var(--fg)}
+@media (max-width:760px){.nav .links{display:none}}
+
+.hero{position:relative; min-height:min(88vh, 60rem); display:grid; overflow:hidden}
+.hero img.bg{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 35%}
+.hero .scrim{position:absolute; inset:0; background:rgba(6,4,6,.4)}
+.hero .in{position:relative; display:grid; grid-template-rows:1fr auto; padding:6.5rem var(--gut) 2rem; gap:2rem}
+.hero .mark{align-self:center; justify-self:center; width:min(78vw, 44rem); color:#fff}
+.hero .meta{display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem 2rem; align-items:end; color:rgba(255,255,255,.85)}
+.hero .meta .big{font-family:var(--serif); font-style:italic; font-size:1.3rem; color:#fff}
+.hero .meta p:last-child{font-size:.9rem; max-width:34ch}
+
+section{padding-top:6rem}
+.sh{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.3fr); gap:1.2rem 4rem; align-items:end; margin-bottom:2.4rem}
+.sh h2{font-size:clamp(2rem, 4.2vw, 4.2rem); line-height:1}
+.sh p{color:var(--mute); max-width:56ch}
+@media (max-width:820px){.sh{grid-template-columns:1fr}}
+
+.opt{display:grid; grid-template-columns:minmax(0, 17rem) minmax(0,1fr); gap:1.4rem 2.4rem; padding-block:2rem; border-top:1px solid var(--line)}
+.opt .info{display:flex; flex-direction:column; gap:.65rem; min-width:0}
+.opt .num{font-family:var(--mono); font-size:.75rem; color:var(--mute); display:flex; gap:.6rem; align-items:center}
+.tag{border:1px solid var(--line); border-radius:999px; padding:.05em .6em; font-size:.68rem}
+.opt h3{font-size:1.8rem; line-height:1.05}
+.opt .why{color:#cfc8be; font-size:.95rem}
+.fav{align-self:flex-start; margin-top:.3rem}
+.fav[aria-pressed="true"]{background:var(--gold); color:#1a1205; border-color:var(--gold)}
+.tiles{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:.6rem}
+.tiles.two{grid-template-columns:repeat(2, minmax(0,1fr))}
+.tile{position:relative; aspect-ratio:4/3.2; border-radius:10px; overflow:hidden; display:grid; place-items:center; max-width:100%}
+.tiles.two .tile{aspect-ratio:16/10}
+.tile .tl{position:absolute; left:.7rem; top:.55rem; font-family:var(--mono); font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; opacity:.55; z-index:2}
+.t-white{background:var(--paper); color:var(--ink)} .t-black{background:#000; color:#fff; box-shadow:inset 0 0 0 1px var(--line)}
+.t-red{background:var(--red); color:#fff}
+.t-photo{color:#fff}
+.tile img.ph{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
+.tile .scrim{position:absolute; inset:0; background:rgba(8,5,6,.42)}
+.mlogo{position:relative; width:70%; max-height:72%; background:currentColor; -webkit-mask:var(--m) center/contain no-repeat; mask:var(--m) center/contain no-repeat; aspect-ratio:var(--ar)}
+.dlogo{position:relative; display:block; width:62%; max-height:80%; overflow:visible}
+.tile img.r3d{position:relative; width:78%; max-height:78%; object-fit:contain; filter:drop-shadow(0 14px 22px rgba(0,0,0,.45))}
+@media (max-width:1100px){.opt{grid-template-columns:1fr}}
+@media (max-width:640px){.tiles{grid-template-columns:1fr} .tiles.two{grid-template-columns:1fr}}
+
+.mgrid{display:grid; grid-template-columns:repeat(12, minmax(0,1fr)); gap:1rem}
+.card{position:relative; border-radius:14px; overflow:hidden; background:var(--panel); min-width:0; margin:0}
+.card > img{display:block; width:100%; height:100%; object-fit:cover}
+.card figcaption{position:absolute; left:1rem; bottom:.8rem; z-index:5; font-family:var(--mono); font-size:.66rem; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.9); background:rgba(0,0,0,.5); padding:.3em .6em; border-radius:6px}
+.s12{grid-column:span 12} .s6{grid-column:span 6}
+@media (max-width:900px){.s6{grid-column:span 12}}
+.proj .space{position:absolute; left:0; top:0; transform-origin:0 0}
+.proj .screen{position:absolute; left:0; top:0; transform-origin:0 0; display:grid; place-items:center; align-content:center; gap:16px; color:#f6eee6}
+.proj .screen .mlogo{width:58%; max-height:none}
+.proj .screen .sub{font-family:var(--sans); letter-spacing:.3em; text-transform:uppercase; font-size:15px; opacity:.85}
+
+.short{position:fixed; z-index:19; right:max(16px, env(safe-area-inset-right,0px)); bottom:calc(env(safe-area-inset-bottom,0px) + 16px); background:rgba(16,14,14,.85); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border:1px solid var(--line); border-radius:999px; padding:.45rem .5rem .45rem 1rem; display:flex; gap:.8rem; align-items:center; font-size:.8rem}
+.short[hidden]{display:none!important}
+footer{padding:6rem 0 4rem; display:grid; gap:2rem}
+.cta-big{border-radius:18px; background:var(--red); padding:3rem var(--gut); display:flex; flex-wrap:wrap; justify-content:space-between; align-items:end; gap:2rem}
+.cta-big h2{font-size:clamp(2rem,4vw,3.8rem); line-height:1; max-width:16ch}
+footer .end{display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem; border-top:1px solid var(--line); padding-top:1.4rem; color:var(--mute); font-size:.8rem}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<nav class="nav" id="nav"><b>RemotoLabs®</b><div class="links"><a href="#logos">Logos</a><a href="#three-d">3D</a><a href="#use">Mockups</a></div><a class="btn solid" href="proposal.html">Proposal →</a></nav>
+
+<header class="hero bleed">
+  <img class="bg" src="img/pyramid-snow.jpg" alt="Crowd in falling snow at the lit Transamerica Pyramid with holiday trees">
+  <div class="scrim"></div>
+  <div class="in">
+    <div class="mark"><div class="mlogo" style="--m:url('logos/v2/nights-of-wonder-original-01.svg');--ar:519/267;width:100%;max-height:none" role="img" aria-label="Nights of Wonder"></div></div>
+    <div class="meta">
+      <p class="big">Redwood Park, Transamerica Pyramid Center · December 10–27, 2026</p>
+      <p>Logo options for RASA: seven marks and two 3D treatments, all for Nights of Wonder.</p>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+<section id="logos">
+  <div class="sh">
+    <div><p class="eyebrow">Logo options</p><h2>Seven ways to write Nights of Wonder.</h2></div>
+    <p>Each mark is shown on white, on black and over a photograph from the program. Star the ones you like; the shortlist stays in this browser and copies as a list.</p>
+  </div>
+  <div id="flat"></div>
+</section>
+
+<section id="three-d">
+  <div class="sh">
+    <div><p class="eyebrow">3D treatments</p><h2>Chrome and wool.</h2></div>
+    <p>The same names turned into objects, for the campaign hero, video and the keepsake box. Shown on black and on red.</p>
+  </div>
+  <div id="dim"></div>
+</section>
+
+<section id="use">
+  <div class="sh">
+    <div><p class="eyebrow">Mockups</p><h2>On the wall, in the hand, in the window.</h2></div>
+    <p>Nights of Wonder on the program's photography, the 20 by 30 foot projection wall, merch and the street.</p>
+  </div>
+  <div class="mgrid">
+    <figure class="card s12"><img src="img/mk-chrome-hero.jpg" alt="Nights of Wonder in white beside a chrome star tied with red velvet ribbon"><figcaption>Campaign hero</figcaption></figure>
+    <figure class="card s6"><img src="img/mk-cocoa-logo.jpg" alt="Nights of Wonder over a mother and daughter sharing hot chocolate"><figcaption>On photography</figcaption></figure>
+    <figure class="card s6"><img src="img/mk-brass-logo.jpg" alt="Nights of Wonder over a brass band playing among the trees"><figcaption>On photography</figcaption></figure>
+    <figure class="card s12 proj" id="projA">
+      <img src="img/movie-homealone.jpg" alt="Families under plaid blankets watching an outdoor movie with the Pyramid behind">
+      <div class="space"><div class="screen" style="width:640px;height:360px;background:radial-gradient(70% 70% at 50% 45%,#6a1428,#2c0611)"><div class="mlogo" style="--m:url('logos/v2/nights-of-wonder-original-01.svg');--ar:519/267"></div><div class="sub">Movie night · Home Alone · Fri Dec 25 · 6 PM</div></div></div>
+      <figcaption>Projection wall, 20 × 30 ft</figcaption>
+    </figure>
+    <figure class="card s6"><img src="img/mk-tote-poster.jpg" alt="Burgundy tote bag with Nights of Wonder and a poster with a crystal star"><figcaption>Tote and poster</figcaption></figure>
+    <figure class="card s6"><img src="img/mk-tote-box.jpg" alt="Velvet tote and gift box with the Nights of Wonder script logo"><figcaption>Merch and keepsake box</figcaption></figure>
+    <figure class="card s6"><img src="img/mk-window.jpg" alt="Shop window with chrome Nights of Wonder lettering above a silver star"><figcaption>Window display</figcaption></figure>
+    <figure class="card s6"><img src="img/mk-poster-wall-v3.jpg" alt="Two posters on a stone wall: a Nights of Wonder poster over a crowd at the outdoor movie with the Transamerica Pyramid, dated December 10 to 13, beside the December 10 to 13 program"><figcaption>Street posters</figcaption></figure>
+  </div>
+</section>
+
+<footer>
+  <div class="cta-big">
+    <div><p class="eyebrow" style="color:#e6c9cf">Next</p><h2>One system your team can run.</h2></div>
+    <a class="btn solid" href="proposal.html">Open the proposal →</a>
+  </div>
+  <div class="end"><span>RemotoLabs® for RASA × Transamerica Pyramid Center</span><span>Concept artwork. Final vector masters follow the logo decision.</span></div>
+</footer>
+</main>
+
+<div class="short" id="short" hidden><span id="shortTxt"></span><button class="btn solid" id="copyShort" type="button">Copy list</button></div>
+
+<script>
+/* ---------- redrawn Pyramid marks (N03, N04) ---------- */
+let UID = 0;
+const P = pts => 'M' + pts.map(p => p.map(n => +n.toFixed(2)).join(' ')).join('L') + 'Z';
+const star4 = (cx, cy, r, t = .13) => { const k = r * t; return `M${cx} ${cy - r}C${cx + k} ${cy - k} ${cx + k} ${cy - k} ${cx + r} ${cy}C${cx + k} ${cy + k} ${cx + k} ${cy + k} ${cx} ${cy + r}C${cx - k} ${cy + k} ${cx - k} ${cy + k} ${cx - r} ${cy}C${cx - k} ${cy - k} ${cx - k} ${cy - k} ${cx} ${cy - r}Z`; };
+const star8 = (cx, cy, r) => { const pts = []; for (let i = 0; i < 16; i++) { const a = -Math.PI / 2 + i * Math.PI / 8, rr = i % 2 ? r * .42 : (i % 4 ? r * .8 : r); pts.push([cx + Math.cos(a) * rr, cy + Math.sin(a) * rr]); } return P(pts); };
+
+/* Transamerica Pyramid, front view: body to the roof at 74%, needle spire above,
+   the two elevator/stair wings standing proud near the top, A-frame arcade at the base.
+   Left face carries the window bands, right face stays solid, split by the ridge. */
+function tower(cx, base, H, B) {
+  const y = f => base - f * H, hw = f => B * (1 - f * 1.02), id = 'tw' + (++UID);
+  const top = .74, wt = .785;
+  const body = P([[cx - B, base], [cx + B, base], [cx + hw(top), y(top)], [cx - hw(top), y(top)]]);
+  const spire = P([[cx - B * .085, y(top)], [cx + B * .085, y(top)], [cx, y(1)]]);
+  const wing = s => P([[cx + s * hw(.5), y(.5)], [cx + s * (hw(.5) - B * .06), y(wt)], [cx + s * B * .2, y(wt)], [cx + s * B * .2, y(top)], [cx + s * hw(top), y(top)]]);
+  let cut = `<rect x="${cx - B * .02}" y="${y(top)}" width="${B * .04}" height="${(top - .045) * H}" fill="#000"/>`;
+  for (let f = .07; f < top - .02; f += .034) cut += `<rect x="${cx - B * 1.3}" y="${y(f).toFixed(2)}" width="${B * 2.6}" height="${(H * .0095).toFixed(2)}" fill="#000"/>`;
+  [-.6, -.3, 0, .3, .6].forEach(k => { const x = cx + B * k; cut += `<path d="${P([[x - B * .11, base + 1], [x, base - H * .045], [x + B * .11, base + 1]])}" fill="#000"/>`; });
+  return `<mask id="${id}" maskUnits="userSpaceOnUse" x="${cx - B * 2}" y="${y(1) - 4}" width="${B * 4}" height="${H + 8}"><rect x="${cx - B * 2}" y="${y(1) - 4}" width="${B * 4}" height="${H + 8}" fill="#fff"/>${cut}</mask>
+    <g mask="url(#${id})"><path d="${body}"/><path d="${wing(-1)}"/><path d="${wing(1)}"/><path d="${spire}"/></g>`;
+}
+const DRAW = {
+  landmark: () => `<svg class="dlogo" viewBox="50 -86 500 520" role="img" aria-label="Nights of Wonder, The City Landmark"><g fill="currentColor">
+    ${tower(300, 268, 304, 33)}<path d="${star4(300, -58, 19)}"/>
+    <text x="300" y="352" text-anchor="middle" font-family="'Marcellus SC', 'Trajan Pro', serif" font-size="62" stroke="currentColor" stroke-width="1.3" textLength="452" lengthAdjust="spacing">NIGHTS OF</text>
+    <text x="300" y="424" text-anchor="middle" font-family="'Marcellus SC', 'Trajan Pro', serif" font-size="62" stroke="currentColor" stroke-width="1.3" textLength="452" lengthAdjust="spacing">WONDER</text></g></svg>`,
+  deco: () => {
+    const cx = 320, rays = [];
+    for (let i = 0; i < 12; i++) { const side = i < 6 ? -1 : 1, j = i % 6, a = (-90 + side * (24 + j * 12.5)) * Math.PI / 180, r1 = 92, r2 = j % 2 ? 168 : 196;
+      rays.push(`<line x1="${(cx + Math.cos(a) * r1).toFixed(1)}" y1="${(78 + Math.sin(a) * r1).toFixed(1)}" x2="${(cx + Math.cos(a) * r2).toFixed(1)}" y2="${(78 + Math.sin(a) * r2).toFixed(1)}"/>`); }
+    const frame = `M44 404V222H74V178H118V146H${cx - 64}M${cx + 64} 146H522V178H566V222H596V404`;
+    return `<svg class="dlogo" viewBox="8 -184 624 632" role="img" aria-label="Nights of Wonder, Deco Celebration"><g fill="currentColor">
+    <g stroke="currentColor" stroke-width="7" stroke-linecap="round">${rays.join('')}</g>
+    <path d="${frame}" fill="none" stroke="currentColor" stroke-width="7" stroke-linejoin="miter"/>
+    <g stroke="currentColor" stroke-width="3"><line x1="60" y1="244" x2="60" y2="396"/><line x1="580" y1="244" x2="580" y2="396"/></g>
+    ${tower(cx, 150, 272, 30)}<path d="${star8(cx, -148, 24)}"/>
+    <text x="${cx}" y="262" text-anchor="middle" font-family="Federo, 'Bodoni Moda', serif" font-size="94" textLength="440" lengthAdjust="spacing">NIGHTS OF</text>
+    <text x="${cx}" y="388" text-anchor="middle" font-family="Federo, 'Bodoni Moda', serif" font-size="132" textLength="470" lengthAdjust="spacing">WONDER</text>
+    <rect x="22" y="414" width="${cx - 54}" height="6"/><rect x="${cx + 32}" y="414" width="${cx - 54}" height="6"/>
+    <rect x="62" y="430" width="${cx - 94}" height="3"/><rect x="${cx + 32}" y="430" width="${cx - 94}" height="3"/>
+    <path d="${star4(cx, 422, 26)}"/></g></svg>`;
+  }
+};
+
+const FLAT = [
+  { no: 'N01', name: 'The Festive Classic', why: 'Sculpted serif lettering and generous flourishes give the name a familiar holiday elegance.', m: 'logos/v2/nights-of-wonder-original-01.svg', ar: '519/267', photo: 'stalls', alt: 'Market stalls with the Pyramid behind' },
+  { no: 'N02', name: 'Warm Holiday Lettering', why: 'Bold flowing letters with energy and warmth, and a strong silhouette at a distance.', m: 'logos/v2/nights-of-wonder-original-02.svg', ar: '492/268', photo: 'orchestra', alt: 'Orchestra playing under the Pyramid' },
+  { no: 'N03', name: 'The City Landmark', pyr: true, draw: 'landmark', why: 'The Transamerica Pyramid, drawn to its real proportions with its spire, wings and arcade, over carved capitals.', photo: 'movie-rudolph', alt: 'Outdoor screening of Rudolph with the Pyramid behind' },
+  { no: 'N04', name: 'Deco Celebration', pyr: true, draw: 'deco', why: 'The Pyramid rises out of a stepped Art Deco marquee under a fan of light, with tall Deco capitals.', photo: 'pr-ballet', alt: 'Ballet dancer among the redwoods' },
+  { no: 'N05', name: 'The Storybook Seal', why: 'Illustrated seasonal details make a friendly emblem with the character of a collectible stamp.', m: 'logos/v2/nights-of-wonder-additional-02.svg', ar: '478/377', photo: 'paper-stars', alt: 'Paper stars and a knit mitten' },
+  { no: 'N06', name: 'Midnight Sculpture', why: 'Flowing italic lettering with one star, made to become a silver object.', m: 'logos/v2/sculpture-flat-nights.svg', ar: '782/317', photo: 'crystal-hands', alt: 'Hands hanging a crystal star' },
+  { no: 'N07', name: 'The Soft Season', why: 'Rounded lowercase and a small star, warm enough to knit onto a beanie.', m: 'logos/v2/knit-flat-nights.svg', ar: '702/315', photo: 'pr-sax', alt: 'Saxophonist in the snow' }
+];
+const DIM = [
+  { no: '3D-1', name: 'Midnight Sculpture, chrome', why: 'Polished silver lettering. Pairs with the chrome star and velvet ribbon.', img: 'img/old-chrome-nights-hd.webp' },
+  { no: '3D-2', name: 'The Soft Season, knit', why: 'Red wool lettering with a felt star; the friendlier of the two.', img: 'img/old-knit-nights-hd.webp' }
+];
+const mask = (o, extra = '') => o.draw ? DRAW[o.draw]() : `<div class="mlogo" style="--m:url('${o.m}');--ar:${o.ar};${extra}" role="img" aria-label="Nights of Wonder, ${o.name}"></div>`;
+let favs = [];
+try { favs = JSON.parse(localStorage.getItem('now-favs-r2') || '[]'); } catch (e) { favs = []; }
+const favBtn = no => `<button class="btn fav" type="button" aria-pressed="${favs.includes(no)}" data-no="${no}">${favs.includes(no) ? '★' : '☆'} Shortlist</button>`;
+const info = (o, tags) => `<div class="info"><div class="num">${o.no}${tags}</div><h3>${o.name}</h3><p class="why">${o.why}</p>${favBtn(o.no)}</div>`;
+
+document.getElementById('flat').innerHTML = FLAT.map(o => `<article class="opt">${info(o, o.pyr ? '<span class="tag">Pyramid</span>' : '')}
+  <div class="tiles">
+    <div class="tile t-white"><span class="tl">White</span>${mask(o)}</div>
+    <div class="tile t-black"><span class="tl">Black</span>${mask(o)}</div>
+    <div class="tile t-photo"><img class="ph" src="img/${o.photo}.jpg" alt="${o.alt}" loading="lazy"><div class="scrim"></div><span class="tl">Photo</span>${mask(o)}</div>
+  </div></article>`).join('');
+document.getElementById('dim').innerHTML = DIM.map(o => `<article class="opt">${info(o, '<span class="tag">3D</span>')}
+  <div class="tiles two">
+    <div class="tile t-black"><span class="tl">Black</span><img class="r3d" src="${o.img}" alt="${o.name}"></div>
+    <div class="tile t-red"><span class="tl">Red</span><img class="r3d" src="${o.img}" alt="${o.name}"></div>
+  </div></article>`).join('');
+
+/* shortlist */
+function syncShort() {
+  document.getElementById('short').hidden = !favs.length;
+  document.getElementById('shortTxt').textContent = 'Shortlist: ' + favs.join(', ');
+  try { localStorage.setItem('now-favs-r2', JSON.stringify(favs)); } catch (e) { }
+}
+document.addEventListener('click', e => {
+  const b = e.target.closest('.fav'); if (!b) return;
+  const no = b.dataset.no; favs = favs.includes(no) ? favs.filter(x => x !== no) : favs.concat(no);
+  b.setAttribute('aria-pressed', favs.includes(no)); b.textContent = (favs.includes(no) ? '★' : '☆') + ' Shortlist'; syncShort();
+});
+document.getElementById('copyShort').addEventListener('click', () => {
+  const all = FLAT.concat(DIM); const txt = 'Nights of Wonder shortlist\n' + favs.map(no => `${no} ${(all.find(x => x.no === no) || {}).name || ''}`).join('\n');
+  const btn = document.getElementById('copyShort');
+  navigator.clipboard.writeText(txt).then(() => { btn.textContent = 'Copied'; setTimeout(() => btn.textContent = 'Copy list', 1600); }).catch(() => { const r = document.createRange(); r.selectNodeContents(document.getElementById('shortTxt')); const s = getSelection(); s.removeAllRanges(); s.addRange(r); });
+});
+syncShort();
+
+/* projection: map a flat title card onto the photographed screen */
+function adj(m) { return [m[4] * m[8] - m[5] * m[7], m[2] * m[7] - m[1] * m[8], m[1] * m[5] - m[2] * m[4], m[5] * m[6] - m[3] * m[8], m[0] * m[8] - m[2] * m[6], m[2] * m[3] - m[0] * m[5], m[3] * m[7] - m[4] * m[6], m[1] * m[6] - m[0] * m[7], m[0] * m[4] - m[1] * m[3]]; }
+function mmm(a, b) { const c = []; for (let i = 0; i < 3; i++) for (let j = 0; j < 3; j++) { let s = 0; for (let k = 0; k < 3; k++) s += a[3 * i + k] * b[3 * k + j]; c[3 * i + j] = s; } return c; }
+function mmv(m, v) { return [m[0] * v[0] + m[1] * v[1] + m[2] * v[2], m[3] * v[0] + m[4] * v[1] + m[5] * v[2], m[6] * v[0] + m[7] * v[1] + m[8] * v[2]]; }
+function basis(p) { const m = [p[0], p[2], p[4], p[1], p[3], p[5], 1, 1, 1]; const v = mmv(adj(m), [p[6], p[7], 1]); return mmm(m, [v[0], 0, 0, 0, v[1], 0, 0, 0, v[2]]); }
+function homography(w, h, q) { const s = basis([0, 0, w, 0, 0, h, w, h]); const d = basis(q); const t = mmm(d, adj(s)); for (let i = 0; i < 9; i++) t[i] /= t[8]; return `matrix3d(${t[0]},${t[3]},0,${t[6]},${t[1]},${t[4]},0,${t[7]},0,0,1,0,${t[2]},${t[5]},0,${t[8]})`; }
+function placeScreens() {
+  const card = document.getElementById('projA'); const img = card.querySelector('img'), space = card.querySelector('.space'), scr = card.querySelector('.screen');
+  const iw = 1536, ih = 1024; space.style.width = iw + 'px'; space.style.height = ih + 'px'; space.style.transform = `scale(${img.clientWidth / iw})`;
+  scr.style.transform = homography(640, 360, [888, 211, 1503, 77, 890, 557, 1517, 529]);
+}
+placeScreens(); addEventListener('resize', placeScreens); addEventListener('load', placeScreens);
+
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('on', scrollY > 60), { passive: true });
+</script>

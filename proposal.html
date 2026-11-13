@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nights of Wonder Proposal</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one proposal page: what they get, the assistant, three weeks, one price */
+:root{
+  --bg:#0b0a0a; --fg:#f3efe8; --mute:#9b948b; --line:rgba(243,239,232,.13); --panel:#151313; --panel2:#1c1919;
+  --velvet:#4a0b19; --velvet2:#6a1428; --forest:#0f3b2b; --gold:#e9c77b;
+  --sans:"Geist", "Helvetica Neue", Helvetica, Arial, sans-serif; --mono:"Geist Mono", ui-monospace, Menlo, monospace; --serif:"Bodoni Moda", "Bodoni 72", Didot, Georgia, serif;
+  --gut:max(16px, 4vw); color-scheme:dark;
+}
+html{font-size:clamp(14px, calc(9.5px + .42vw), 23px)}
+body{background:var(--bg); color:var(--fg); font-family:var(--sans); line-height:1.5; -webkit-font-smoothing:antialiased;
+  padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); overflow-x:hidden}
+main{padding-inline:calc(var(--gut) - 16px); padding-block:0 4rem}
+h1,h2,h3{font-weight:500; letter-spacing:-.02em; text-wrap:balance; margin:0}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold); outline-offset:3px}
+.eyebrow{font-family:var(--mono); font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--mute)}
+.btn{display:inline-flex; align-items:center; gap:.5em; border:1px solid var(--line); border-radius:999px; padding:.55em 1.1em; font:500 .85rem var(--sans); color:var(--fg); background:transparent; cursor:pointer; text-decoration:none}
+.btn.solid{background:var(--fg); color:var(--bg); border-color:var(--fg)}
+.nav{position:fixed; z-index:20; left:50%; top:calc(env(safe-area-inset-top,0px) + 14px); transform:translateX(-50%); display:flex; align-items:center; gap:1.4rem; padding:.5rem .6rem .5rem 1.1rem; border-radius:999px; border:1px solid transparent; transition:background .3s, border-color .3s; white-space:nowrap; max-width:calc(100vw - 32px)}
+.nav.on{background:rgba(16,14,14,.75); border-color:var(--line); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px)}
+.nav b{font-weight:600; font-size:.9rem}
+.nav .links{display:flex; gap:1.1rem; font-size:.82rem; color:var(--mute)} .nav .links a{text-decoration:none}
+@media (max-width:760px){.nav .links{display:none}}
+
+.hero{padding:8rem 0 3rem; display:grid; grid-template-columns:minmax(0,1.4fr) minmax(0,1fr); gap:2rem 4rem; align-items:end; border-bottom:1px solid var(--line)}
+.hero h1{font-family:var(--serif); font-weight:500; font-size:clamp(2.6rem, 6.2vw, 6.4rem); line-height:.95; letter-spacing:-.03em}
+.hero h1 em{font-style:italic}
+.hero .sum{display:grid; gap:1rem; color:#d6cfc4}
+.hero .meta{display:flex; flex-wrap:wrap; gap:.4rem 1.4rem; font-family:var(--mono); font-size:.72rem; color:var(--mute)}
+@media (max-width:860px){.hero{grid-template-columns:1fr}}
+.kpis{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:14px; overflow:hidden; margin-top:2.4rem}
+.kpis div{background:var(--bg); padding:1.2rem 1.3rem}
+.kpis strong{display:block; font-family:var(--serif); font-weight:500; font-size:2.3rem; line-height:1.05}
+.kpis span{color:var(--mute); font-size:.84rem}
+@media (max-width:760px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+section{padding-top:5.5rem}
+.sh{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.3fr); gap:1rem 4rem; align-items:end; margin-bottom:2.2rem}
+.sh h2{font-size:clamp(1.9rem, 3.8vw, 3.8rem); line-height:1}
+.sh p{color:var(--mute); max-width:58ch}
+@media (max-width:860px){.sh{grid-template-columns:1fr}}
+
+.three{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem}
+@media (max-width:900px){.three{grid-template-columns:1fr}}
+.part{background:var(--panel); border-radius:16px; padding:1.6rem; display:grid; gap:1rem; align-content:start; min-width:0}
+.part .k{font-family:var(--mono); font-size:.7rem; color:var(--gold)}
+.part h3{font-size:1.45rem}
+.part ul{margin:0; padding-left:1.1rem; display:grid; gap:.35rem; color:#d6cfc4; font-size:.88rem}
+.demo{margin-top:1rem; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:1rem}
+@media (max-width:900px){.demo{grid-template-columns:1fr}}
+.chat{background:var(--panel); border-radius:16px; padding:1.4rem; display:grid; gap:.8rem; font-size:.86rem; min-width:0; align-content:start}
+.msg{border-radius:12px; padding:.8rem 1rem; max-width:92%}
+.msg.u{background:#2a2626; justify-self:end}
+.msg.a{background:#1f1b1b; border:1px solid var(--line)}
+.msg.a dl{display:grid; grid-template-columns:auto 1fr; gap:.35rem .9rem; margin:.4rem 0 0}
+.msg.a dt{font-family:var(--mono); font-size:.66rem; color:var(--mute); padding-top:.15rem} .msg.a dd{margin:0}
+.can{background:var(--panel); border-radius:16px; padding:1.4rem 1.6rem; display:grid; gap:.9rem; align-content:start; min-width:0}
+.can ol{margin:0; padding-left:1.2rem; display:grid; gap:.55rem; color:#d6cfc4; font-size:.9rem}
+.can ol b{color:var(--fg); font-weight:500}
+
+/* period of performance */
+.weeks{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; position:relative}
+@media (max-width:900px){.weeks{grid-template-columns:1fr}}
+.wk{background:var(--panel); border-radius:16px; padding:1.6rem; display:grid; gap:1rem; align-content:start; min-width:0; border-top:3px solid var(--gold)}
+.wk .h{display:flex; justify-content:space-between; gap:1rem; align-items:baseline}
+.wk .h b{font-family:var(--serif); font-weight:500; font-size:2.4rem; line-height:1}
+.wk .h span{font-family:var(--mono); font-size:.72rem; color:var(--mute); text-align:right}
+.wk h3{font-size:1.3rem}
+.wk ul{margin:0; padding-left:1.1rem; display:grid; gap:.35rem; color:#d6cfc4; font-size:.88rem}
+.wk .out{border-top:1px solid var(--line); padding-top:.8rem; font-size:.84rem}
+.wk .out em{font-style:normal; font-family:var(--mono); font-size:.68rem; color:var(--gold); display:block; margin-bottom:.2rem; letter-spacing:.06em; text-transform:uppercase}
+.bar{margin-top:1rem; background:var(--panel); border-radius:16px; padding:1.2rem 1.4rem; overflow-x:auto}
+.bar svg{display:block; width:100%; min-width:40rem; height:auto}
+
+/* price */
+.price{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.2fr); gap:1rem}
+@media (max-width:900px){.price{grid-template-columns:1fr}}
+.pcard{background:var(--velvet); border-radius:18px; padding:2rem; display:grid; gap:1rem; align-content:start}
+.pcard .amt{font-family:var(--serif); font-size:clamp(3.4rem, 7vw, 5.6rem); line-height:1; font-variant-numeric:tabular-nums}
+.pcard p{color:#ecd3d8}
+.pcard .sprint{display:grid; grid-template-columns:auto minmax(0,1fr); gap:1rem; align-items:center; background:rgba(0,0,0,.18); border-radius:12px; padding:.9rem 1rem}
+.pcard .sprint strong{font-family:var(--serif); font-size:2rem; line-height:1; font-weight:400}
+.pcard .sprint span{font-size:.86rem; color:#ecd3d8}
+.pcard .sprint b{color:#fff; font-weight:500}
+.pcard .terms{display:grid; gap:.4rem; font-size:.84rem; color:#e9c3cb; border-top:1px solid rgba(255,255,255,.18); padding-top:1rem}
+.incl{background:var(--panel); border-radius:18px; padding:2rem; display:grid; gap:1rem; align-content:start}
+.incl ul{margin:0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.6rem 1.4rem; font-size:.9rem}
+@media (max-width:640px){.incl ul{grid-template-columns:1fr}}
+.incl li{display:grid; grid-template-columns:1rem 1fr; gap:.5rem}
+.incl li::before{content:"✦"; color:var(--gold); font-size:.7rem; padding-top:.2rem}
+.two{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem}
+@media (max-width:860px){.two{grid-template-columns:1fr}}
+.box{background:var(--panel); border-radius:16px; padding:1.6rem; display:grid; gap:.8rem; align-content:start}
+.box ul{margin:0; padding-left:1.1rem; display:grid; gap:.4rem; color:#d6cfc4; font-size:.9rem}
+.close{margin-top:5.5rem; border-radius:20px; background:var(--forest); padding:3rem var(--gut); display:flex; flex-wrap:wrap; justify-content:space-between; align-items:end; gap:2rem}
+.close h2{font-family:var(--serif); font-size:clamp(2rem,4.4vw,4rem); line-height:1; max-width:18ch}
+.close p{color:#cfe3d6; max-width:40ch; margin-top:1rem}
+footer{display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem; color:var(--mute); font-size:.78rem; border-top:1px solid var(--line); padding-top:1.4rem; margin-top:3rem}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<nav class="nav" id="nav"><b>RemotoLabs®</b><div class="links"><a href="#system">The system</a><a href="#weeks">Three weeks</a><a href="#price">Investment</a></div><a class="btn solid" href="index.html">See the logos →</a></nav>
+
+<main>
+<header class="hero">
+  <div>
+    <p class="eyebrow" style="margin-bottom:1.4rem">Proposal · RASA × Transamerica Pyramid Center</p>
+    <h1>Nights of Wonder, <em>a brand system</em> your team can run.</h1>
+  </div>
+  <div class="sum">
+    <p>One price, three weeks. We finish the logo, build the guidelines and templates, and set up an AI assistant that knows the brand, the program and the voice.</p>
+    <p>Everything is handed over on Friday, December 4, a week before opening night, so your team can post four times a week through December on its own.</p>
+    <div class="meta"><span>Prepared Nov 12, 2026</span><span>Start Nov 16</span><span>RemotoLabs</span></div>
+  </div>
+</header>
+
+<div class="kpis">
+  <div><strong>3</strong><span>weeks, Nov 16 – Dec 4</span></div>
+  <div><strong>24</strong><span>editable templates</span></div>
+  <div><strong>1</strong><span>AI assistant trained on the brand</span></div>
+  <div><strong id="kpiPrice">$1,600</strong><span>one fixed price</span></div>
+</div>
+
+<section id="system">
+  <div class="sh">
+    <div><p class="eyebrow">What you get</p><h2>Logo, kit and assistant.</h2></div>
+    <p>We build the identity once, properly, and hand over the tools to keep making it. No retainer and no hourly billing.</p>
+  </div>
+  <div class="three">
+    <div class="part"><span class="k">01 · The logo</span><h3>Final identity</h3><p style="color:#d6cfc4">The chosen Nights of Wonder mark, redrawn as a clean production master.</p>
+      <ul><li>Vector master files in every colourway</li><li>3D render set in the chosen material</li><li>Colour, type and spacing rules</li><li>Files ready for print, screens and merch</li></ul></div>
+    <div class="part"><span class="k">02 · The kit</span><h3>Guidelines and 24 templates</h3><p style="color:#d6cfc4">A living brand guide on one web page, plus templates in Figma or Canva with the logo, colour and type locked.</p>
+      <ul><li>Posts, carousels and stories</li><li>Poster, A-frame sign, banner, menu card</li><li>Ticket, wristband, merch tag, email header</li><li>Photo direction and voice, with examples</li></ul></div>
+    <div class="part"><span class="k">03 · The assistant</span><h3>An AI harness for the brand</h3><p style="color:#d6cfc4">A Claude project loaded with the guide, the twelve-night program, the voice and the template map.</p>
+      <ul><li>Writes captions, alt text and hashtags in the brand voice</li><li>Picks the right template for each post</li><li>Writes image prompts in the house photo style</li><li>Comes with a four-a-week posting plan to Dec 31</li><li>Checks drafts against the guidelines</li></ul></div>
+  </div>
+  <div class="demo">
+    <div class="chat">
+      <p class="eyebrow">Example exchange with the assistant</p>
+      <div class="msg u">Post for Friday Dec 25. Home Alone movie night. Keep it warm, it's Christmas.</div>
+      <div class="msg a">Here is the post for Christmas night.
+        <dl>
+          <dt>Template</dt><dd>Feed · Movie night</dd>
+          <dt>Caption</dt><dd>Kevin's home. Bring a blanket. Home Alone on the big wall at 7, cocoa from 6, under the Pyramid all night. Merry Christmas, San Francisco.</dd>
+          <dt>Alt text</dt><dd>Families under plaid blankets watching Home Alone on an outdoor screen, the Transamerica Pyramid lit behind them.</dd>
+          <dt>Check</dt><dd>Time matches the program (6 PM open). Logo has clear space. Under 150 characters before the fold.</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="can">
+      <p class="eyebrow">How your team uses it</p>
+      <ol>
+        <li><b>Ask.</b> One line: the night, the subject, the tone.</li>
+        <li><b>Get a draft.</b> Caption, alt text, template and image direction.</li>
+        <li><b>Fill the template.</b> Drop in the photo and the text; the brand is locked.</li>
+        <li><b>Approve and schedule.</b> In Meta Business Suite, as you do today.</li>
+      </ol>
+      <p style="color:var(--mute);font-size:.84rem">About 20 minutes from idea to scheduled post once the kit is in place.</p>
+    </div>
+  </div>
+</section>
+
+<section id="weeks">
+  <div class="sh">
+    <div><p class="eyebrow">Period of performance</p><h2>Three weeks, three deliveries.</h2></div>
+    <p>Work runs Monday, November 16 to Friday, December 4. Each week ends with something you can use, and the whole system is in your hands six days before opening night.</p>
+  </div>
+  <div class="weeks">
+    <div class="wk"><div class="h"><b>Week 1</b><span>Nov 16 – 20</span></div><h3>The logo</h3>
+      <ul><li>Logo decision on Monday</li><li>Production redraw of the chosen mark</li><li>All colourways and lockups</li><li>3D render set</li><li>Colour and type system</li></ul>
+      <p class="out"><em>Delivered Fri Nov 20</em>Logo package, ready to use.</p></div>
+    <div class="wk"><div class="h"><b>Week 2</b><span>Nov 23 – 25</span></div><h3>Guidelines and templates</h3>
+      <ul><li>Brand guide web page</li><li>24 templates in Figma or Canva</li><li>Photo direction and voice</li><li>One review round with your team</li></ul>
+      <p class="out"><em>Delivered Wed Nov 25</em>Guide and templates, before Thanksgiving.</p></div>
+    <div class="wk"><div class="h"><b>Week 3</b><span>Nov 30 – Dec 4</span></div><h3>The assistant and handover</h3>
+      <ul><li>AI assistant set up and tested</li><li>Posting plan loaded through Dec 31</li><li>Test run: your team makes three posts with it</li><li>One-hour training session</li></ul>
+      <p class="out"><em>Delivered Fri Dec 4</em>Full handover. Email support through Dec 18.</p></div>
+  </div>
+  <div class="bar" aria-label="Timeline from November 16 to December 27">
+    <svg viewBox="0 0 960 120" role="img" aria-label="Weeks 1 to 3 of work, then opening night December 10 and the twelve nights to December 27">
+      <g font-family="Geist Mono, Menlo, monospace" font-size="11" fill="#9b948b">
+        <line x1="20" y1="60" x2="940" y2="60" stroke="rgba(243,239,232,.18)" stroke-width="1"/>
+        <rect x="20" y="44" width="153" height="32" rx="6" fill="#e9c77b"/><text x="96" y="64" text-anchor="middle" fill="#1a1205" font-weight="500">WEEK 1 · LOGO</text>
+        <rect x="177" y="44" width="153" height="32" rx="6" fill="#d8b766"/><text x="253" y="64" text-anchor="middle" fill="#1a1205" font-weight="500">WEEK 2 · KIT</text>
+        <rect x="334" y="44" width="112" height="32" rx="6" fill="#c7a656"/><text x="390" y="64" text-anchor="middle" fill="#1a1205" font-weight="500">WEEK 3 · AI</text>
+        <rect x="450" y="44" width="310" height="32" rx="6" fill="#1c1919"/><text x="605" y="64" text-anchor="middle">EMAIL SUPPORT TO DEC 18</text>
+        <rect x="559" y="84" width="381" height="10" rx="3" fill="#4a0b19"/><text x="750" y="112" text-anchor="middle" fill="#e9c3cb">THE TWELVE NIGHTS · DEC 10 – 27</text>
+        <text x="20" y="30">NOV 16</text><text x="334" y="30" text-anchor="middle">NOV 30</text><text x="446" y="30" text-anchor="middle" fill="#e9c77b">HANDOVER DEC 4</text><text x="559" y="30" text-anchor="start">DEC 10</text><text x="940" y="30" text-anchor="end">DEC 27</text>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<section id="price">
+  <div class="sh">
+    <div><p class="eyebrow">Investment</p><h2>One price for the whole system.</h2></div>
+    <p>Fixed for the three weeks, in US dollars. Everything we make is yours to keep and reuse next December.</p>
+  </div>
+  <div class="price">
+    <div class="pcard">
+      <p class="eyebrow" style="color:#e9c3cb">Nights of Wonder brand system</p>
+      <div class="amt" id="amt">$1,600</div>
+      <p>Logo, guidelines, 24 templates and the AI assistant, delivered by December 4.</p>
+      <div class="sprint"><strong>$400</strong><span><b>Each sprint after that.</b> A one-week block, booked when you need it: new templates, a campaign refresh, or updates to the assistant.</span></div>
+      <div class="terms"><span>50% to start on Nov 16, 50% at handover on Dec 4. Extra sprints are billed when booked.</span><span>Software seats (Claude, Figma or Canva) are paid by RASA directly.</span><span>Valid for a start by November 16.</span></div>
+    </div>
+    <div class="incl">
+      <p class="eyebrow">Included</p>
+      <ul>
+        <li>Production redraw of the chosen logo</li><li>Vector masters in every colourway</li>
+        <li>3D render set</li><li>Colour, type and spacing system</li>
+        <li>Brand guide web page</li><li>24 editable templates</li>
+        <li>AI assistant set up and tested</li><li>Posting plan through Dec 31</li>
+        <li>One-hour training session</li><li>Two weeks of email support</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="two">
+    <div class="box"><p class="eyebrow">What we need from RASA</p><ul><li>The logo choice on Monday, November 16</li><li>One approver with a 24-hour turnaround</li><li>Final program, vendor list and partner logos</li><li>Who on the team will use the assistant, for the training</li></ul></div>
+    <div class="box"><p class="eyebrow">Not included</p><ul><li>Making or posting the content itself</li><li>On-site photography or video</li><li>Printing and fabrication</li><li>Paid ad spend</li></ul></div>
+  </div>
+</section>
+
+<div class="close">
+  <div><h2>Pick the logo and we start Monday.</h2><p>Reply with the logo shortlist and a go-ahead. Week one starts November 16.</p></div>
+  <a class="btn solid" href="index.html">Back to the logo options →</a>
+</div>
+<footer><span>RemotoLabs® for RASA × Transamerica Pyramid Center</span><span>Program details from the RASA brief.</span></footer>
+</main>
+
+<script>
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('on', scrollY > 60), { passive: true });
+</script>
