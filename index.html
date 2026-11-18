@@ -116,11 +116,11 @@ footer .end{display:flex; flex-wrap:wrap; justify-content:space-between; gap:1re
 .revbar h2{font-size:clamp(1.8rem,3.6vw,3.4rem); line-height:1}
 .revbar p{color:var(--mute); max-width:52ch}
 /* ---------- Revision 2: lockups ---------- */
-.r2hero{position:relative; min-height:min(92vh, 62rem); display:grid; overflow:hidden; background:#140608}
-.r2hero img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
-.r2hero .in{position:relative; display:flex; flex-direction:column; justify-content:flex-end; padding:6.5rem var(--gut) 2.2rem; gap:1rem; background:linear-gradient(to top, rgba(10,4,6,.82), rgba(10,4,6,0) 46%)}
-.r2fb{position:absolute; inset:0; display:grid; justify-items:center; align-items:start; padding-top:5.2rem; background:radial-gradient(80% 70% at 50% 35%, #6a1428, #1c0509); color:#f1e3c8}
-.r2fb .m{width:min(64vw, 36rem); height:calc(100% - 22rem); min-height:9rem; background:currentColor; -webkit-mask:var(--m) center/contain no-repeat; mask:var(--m) center/contain no-repeat}
+.r2hero{position:relative; display:block; overflow:hidden; background:#140608}
+.r2hero img{position:relative; display:block; width:100%; height:auto; max-height:88vh; object-fit:cover}
+.r2hero .in{position:relative; display:flex; flex-direction:column; justify-content:flex-end; padding:2.4rem var(--gut) 2.4rem; gap:1rem}
+.r2fb{position:relative; aspect-ratio:16/9; max-height:88vh; display:grid; justify-items:center; align-items:center; padding-top:3rem; background:radial-gradient(80% 70% at 50% 35%, #6a1428, #1c0509); color:#f1e3c8}
+.r2fb .m{width:min(64vw, 36rem); height:78%; min-height:9rem; background:currentColor; -webkit-mask:var(--m) center/contain no-repeat; mask:var(--m) center/contain no-repeat}
 .r2hero .rev{font-family:var(--mono); font-size:.75rem; letter-spacing:.16em; text-transform:uppercase; color:#f1e3c8}
 .r2hero h1{font-size:clamp(2.2rem, 5vw, 5rem); line-height:.98; max-width:18ch}
 .r2hero p{max-width:58ch; color:rgba(255,255,255,.85)}
@@ -144,10 +144,11 @@ footer .end{display:flex; flex-wrap:wrap; justify-content:space-between; gap:1re
 @media (max-width:760px){.springs{grid-template-columns:1fr}}
 .springs .art{aspect-ratio:2/1.15}
 .chromegrid{display:grid; grid-template-columns:repeat(auto-fill, minmax(min(100%, 26rem), 1fr)); gap:1rem}
-.chromegrid figure{margin:0; border-radius:14px; overflow:hidden; background:radial-gradient(90% 80% at 50% 40%, #3a0a16, #12050a); aspect-ratio:5/4; display:grid; place-items:center; position:relative}
+.chromegrid figure{margin:0; border-radius:14px; overflow:hidden; background:radial-gradient(90% 80% at 50% 40%, #3a0a16, #12050a); display:grid; grid-template-rows:auto auto; position:relative}
+.chromegrid figure .ca{position:relative; aspect-ratio:5/4}
 .chromegrid figure.blk{background:radial-gradient(90% 80% at 50% 40%, #1d1a1a, #050505)}
-.chromegrid img{width:86%; max-height:86%; object-fit:contain; filter:drop-shadow(0 18px 26px rgba(0,0,0,.5))}
-.chromegrid figcaption{position:absolute; left:1rem; bottom:.8rem; font-family:var(--mono); font-size:.64rem; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.85)}
+.chromegrid img{position:absolute; left:7%; top:7%; width:86%; height:86%; object-fit:contain; filter:drop-shadow(0 18px 26px rgba(0,0,0,.5))}
+.chromegrid figcaption{padding:.8rem 1rem; border-top:1px solid rgba(255,255,255,.08); font-family:var(--mono); font-size:.64rem; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.85); background:rgba(0,0,0,.25)}
 .revsep{margin-top:7rem; padding:2.4rem 0 0; border-top:1px solid var(--line); display:flex; justify-content:space-between; flex-wrap:wrap; gap:1rem; align-items:end}
 .revsep h2{font-size:clamp(1.8rem,3.6vw,3.4rem); line-height:1}
 .revsep p{color:var(--mute); max-width:52ch}
@@ -157,7 +158,7 @@ footer .end{display:flex; flex-wrap:wrap; justify-content:space-between; gap:1re
 <nav class="nav" id="nav"><b>RemotoLabs®</b><div class="links"><a href="#r3lockups">Pyramid of Light</a><a href="#r3chrome">Chrome</a><a href="#rev2">Revision 2</a><a href="#rev1">Revision 1</a></div><a class="btn solid" href="proposal.html">Proposal →</a></nav>
 
 <header class="r3hero bleed" id="r3">
-  <div class="art" aria-hidden="true"><div class="m" style="--m:url('logos/r3/lockups/now-pyramid-of-light-warm-classic.svg')"></div><img src="img/r3chrome/warm-classic-champagne.webp" alt="" onerror="this.remove()"></div>
+  <div class="art" aria-hidden="true"><div class="m" style="--m:url('logos/r3/lockups/now-pyramid-of-light-warm-classic.svg')"></div><img src="img/r3chrome/warm-classic-champagne.webp" alt="" onload="const f=this.parentNode.querySelector('.m'); if(f) f.remove()" onerror="this.remove()"></div>
   <div class="in">
     <p class="rev">Revision 3 · Pyramid of Light</p>
     <h1>Nights of Wonder, Pyramid of Light.</h1>
@@ -193,7 +194,7 @@ footer .end{display:flex; flex-wrap:wrap; justify-content:space-between; gap:1re
 
 <header class="r2hero bleed" id="r2">
   <div class="r2fb" aria-hidden="true"><div class="m" style="--m:url('logos/r2/lockups/now-warm-classic-holiday.svg')"></div></div>
-  <img src="img/hero/hero-stage-champagne.jpg" alt="Nights of Wonder in inflated champagne chrome on a burgundy velvet stage with gold ornaments and warm lights" onerror="this.remove()">
+  <img src="img/hero/hero-stage-champagne.jpg" alt="Nights of Wonder in inflated champagne chrome on a burgundy velvet stage with gold ornaments and warm lights" onload="const f=this.parentNode.querySelector('.r2fb'); if(f) f.remove()" onerror="this.remove()">
   <div class="in">
     <p class="rev">Revision 2 · November 17</p>
     <h1>Nights of Wonder, as a lockup system.</h1>
@@ -279,11 +280,10 @@ footer .end{display:flex; flex-wrap:wrap; justify-content:space-between; gap:1re
     <p>Nights of Wonder on the program's photography, the 20 by 30 foot projection wall, merch and the street.</p>
   </div>
   <div class="mgrid">
-    <figure class="card s12"><img src="img/hero/hero-stage-champagne.jpg" onerror="this.closest('figure').remove()" alt="Champagne chrome Nights of Wonder on a lacquered burgundy stage with velvet curtains, gold ornaments and warm lights"><figcaption>Champagne chrome · velvet stage</figcaption></figure>
-    <figure class="card s6"><img src="img/hero/hero-spot-champagne.jpg" onerror="this.closest('figure').remove()" alt="Champagne chrome Nights of Wonder under a single spotlight on a dark burgundy mirror floor"><figcaption>Champagne chrome · spotlight</figcaption></figure>
+    <figure class="card s12"><img src="img/hero/hero-spot-champagne.jpg" onerror="this.closest('figure').remove()" alt="Champagne chrome Nights of Wonder under a single spotlight on a dark burgundy mirror floor"><figcaption>Champagne chrome · spotlight</figcaption></figure>
     <figure class="card s6"><img src="img/hero/hero-flatlay-champagne.jpg" onerror="this.closest('figure').remove()" alt="Champagne chrome Nights of Wonder lying on draped burgundy satin with pearls and gold ornaments"><figcaption>Champagne chrome · satin and pearls</figcaption></figure>
     <figure class="card s6"><img src="img/hero/hero-stage-silver.jpg" onerror="this.closest('figure').remove()" alt="Silver chrome Nights of Wonder on the burgundy velvet stage"><figcaption>Silver chrome · velvet stage</figcaption></figure>
-    <figure class="card s6"><img src="img/hero/hero-spot-rose.jpg" onerror="this.closest('figure').remove()" alt="Rose champagne Nights of Wonder under a spotlight on a dark burgundy mirror floor"><figcaption>Rose champagne · spotlight</figcaption></figure>
+    <figure class="card s12"><img src="img/hero/hero-spot-rose.jpg" onerror="this.closest('figure').remove()" alt="Rose champagne Nights of Wonder under a spotlight on a dark burgundy mirror floor"><figcaption>Rose champagne · spotlight</figcaption></figure>
     <figure class="card s12"><img src="img/mk-chrome-hero.jpg" alt="Nights of Wonder in white beside a chrome star tied with red velvet ribbon"><figcaption>Campaign hero</figcaption></figure>
     <figure class="card s6"><img src="img/mk-cocoa-logo.jpg" alt="Nights of Wonder over a mother and daughter sharing hot chocolate"><figcaption>On photography</figcaption></figure>
     <figure class="card s6"><img src="img/mk-brass-logo.jpg" alt="Nights of Wonder over a brass band playing among the trees"><figcaption>On photography</figcaption></figure>
@@ -349,7 +349,7 @@ const CHROME = [
   ['soft-classic-holiday', 'champagne', 'Festive Classic soft · champagne chrome', ''],
   ['warm-classic-holiday', 'silver', 'Warm Holiday Lettering · silver chrome', 'blk']
 ];
-document.getElementById('chromegrid').innerHTML = CHROME.map(([n, f, c, k]) => `<figure class="${k}"><img src="img/r2chrome/${n}-${f}.webp" alt="Nights of Wonder lockup, ${c}" loading="lazy" onerror="this.closest('figure').remove()"><figcaption>${c}</figcaption></figure>`).join('');
+document.getElementById('chromegrid').innerHTML = CHROME.map(([n, f, c, k]) => `<figure class="${k}"><div class="ca"><img src="img/r2chrome/${n}-${f}.webp" alt="Nights of Wonder lockup, ${c}" loading="lazy" onerror="this.closest('figure').remove()"></div><figcaption>${c}</figcaption></figure>`).join('');
 
 /* ---------- Revision 3 ---------- */
 const R3 = { mark: 'all', cw: 'burg' }; let LOCK3 = [];
@@ -367,7 +367,7 @@ document.getElementById('r3chromegrid').innerHTML = [
   ['warm-classic', 'champagne', 'Warm Holiday Lettering · champagne', ''], ['soft-halo', 'silver', 'Halo · Festive Classic soft · silver', 'blk'],
   ['clean-seal', 'champagne', 'Seal · Festive Classic clean · champagne', ''], ['warm-arch', 'silver', 'Arch · Warm Holiday Lettering · silver', 'blk'],
   ['warm-classic', 'silver', 'Warm Holiday Lettering · silver', 'blk'], ['soft-halo', 'champagne', 'Halo · Festive Classic soft · champagne', '']
-].map(([n, f, c, k]) => `<figure class="${k}"><img src="img/r3chrome/${n}-${f}.webp" alt="Nights of Wonder, Pyramid of Light, ${c}" loading="lazy" onerror="this.closest('figure').remove()"><figcaption>${c}</figcaption></figure>`).join('');
+].map(([n, f, c, k]) => `<figure class="${k}"><div class="ca"><img src="img/r3chrome/${n}-${f}.webp" alt="Nights of Wonder, Pyramid of Light, ${c}" loading="lazy" onerror="this.closest('figure').remove()"></div><figcaption>${c}</figcaption></figure>`).join('');
 /* ---------- redrawn Pyramid marks (N03, N04) ---------- */
 let UID = 0;
 const P = pts => 'M' + pts.map(p => p.map(n => +n.toFixed(2)).join(' ')).join('L') + 'Z';
