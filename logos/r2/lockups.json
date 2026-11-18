@@ -1,0 +1,602 @@
+[
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "classic",
+"layoutName": "Classic stack",
+"note": "Trajan Sans caps, \"by\" in Lovelace italic",
+"desc": "holiday",
+"file": "logos/r2/lockups/now-warm-classic-holiday.svg",
+"ar": 1.1974
+},
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "classic",
+"layoutName": "Classic stack",
+"note": "Trajan Sans caps, \"by\" in Lovelace italic",
+"desc": "pyramid",
+"file": "logos/r2/lockups/now-warm-classic-pyramid.svg",
+"ar": 1.2003
+},
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "starrule",
+"layoutName": "Star rule",
+"note": "Novecento caps between rules, with the RASA logo",
+"desc": "holiday",
+"file": "logos/r2/lockups/now-warm-starrule-holiday.svg",
+"ar": 1.1599
+},
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "starrule",
+"layoutName": "Star rule",
+"note": "Novecento caps between rules, with the RASA logo",
+"desc": "pyramid",
+"file": "logos/r2/lockups/now-warm-starrule-pyramid.svg",
+"ar": 1.1597
+},
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "horizontal",
+"layoutName": "Horizontal",
+"note": "Mark beside the event name, for banners and signage",
+"desc": "holiday",
+"file": "logos/r2/lockups/now-warm-horizontal-holiday.svg",
+"ar": 2.4338
+},
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "horizontal",
+"layoutName": "Horizontal",
+"note": "Mark beside the event name, for banners and signage",
+"desc": "pyramid",
+"file": "logos/r2/lockups/now-warm-horizontal-pyramid.svg",
+"ar": 2.6684
+},
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "presents",
+"layoutName": "RASA presents",
+"note": "RASA logo on top, event name in Lovelace",
+"desc": "holiday",
+"file": "logos/r2/lockups/now-warm-presents-holiday.svg",
+"ar": 1.107
+},
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "presents",
+"layoutName": "RASA presents",
+"note": "RASA logo on top, event name in Lovelace",
+"desc": "pyramid",
+"file": "logos/r2/lockups/now-warm-presents-pyramid.svg",
+"ar": 1.1023
+},
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "arch",
+"layoutName": "Arch",
+"note": "Event name arched over the mark, like a seal",
+"desc": "holiday",
+"file": "logos/r2/lockups/now-warm-arch-holiday.svg",
+"ar": 1.1577
+},
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "arch",
+"layoutName": "Arch",
+"note": "Event name arched over the mark, like a seal",
+"desc": "pyramid",
+"file": "logos/r2/lockups/now-warm-arch-pyramid.svg",
+"ar": 1.1577
+},
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "script",
+"layoutName": "Script",
+"note": "Event name in Lovelace Script under the mark",
+"desc": "holiday",
+"file": "logos/r2/lockups/now-warm-script-holiday.svg",
+"ar": 1.1434
+},
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "script",
+"layoutName": "Script",
+"note": "Event name in Lovelace Script under the mark",
+"desc": "pyramid",
+"file": "logos/r2/lockups/now-warm-script-pyramid.svg",
+"ar": 1.1559
+},
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "pill",
+"layoutName": "Pill tag",
+"note": "Event name in an outlined pill, RASA in Acid Grotesk",
+"desc": "holiday",
+"file": "logos/r2/lockups/now-warm-pill-holiday.svg",
+"ar": 1.1771
+},
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "pill",
+"layoutName": "Pill tag",
+"note": "Event name in an outlined pill, RASA in Acid Grotesk",
+"desc": "pyramid",
+"file": "logos/r2/lockups/now-warm-pill-pyramid.svg",
+"ar": 1.1771
+},
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "brand",
+"layoutName": "RASA type",
+"note": "Event name in Acid Grotesk, RASA in Sofia Pro",
+"desc": "holiday",
+"file": "logos/r2/lockups/now-warm-brand-holiday.svg",
+"ar": 1.2401
+},
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "brand",
+"layoutName": "RASA type",
+"note": "Event name in Acid Grotesk, RASA in Sofia Pro",
+"desc": "pyramid",
+"file": "logos/r2/lockups/now-warm-brand-pyramid.svg",
+"ar": 1.2401
+},
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "logorow",
+"layoutName": "Logo row",
+"note": "Event name and RASA logo side by side",
+"desc": "holiday",
+"file": "logos/r2/lockups/now-warm-logorow-holiday.svg",
+"ar": 1.3344
+},
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "logorow",
+"layoutName": "Logo row",
+"note": "Event name and RASA logo side by side",
+"desc": "pyramid",
+"file": "logos/r2/lockups/now-warm-logorow-pyramid.svg",
+"ar": 1.3407
+},
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "beacon",
+"layoutName": "Beacon",
+"note": "The Pyramid with a fan of light over the event name",
+"desc": "holiday",
+"file": "logos/r2/lockups/now-warm-beacon-holiday.svg",
+"ar": 0.7723
+},
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "beacon",
+"layoutName": "Beacon",
+"note": "The Pyramid with a fan of light over the event name",
+"desc": "pyramid",
+"file": "logos/r2/lockups/now-warm-beacon-pyramid.svg",
+"ar": 0.7745
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "classic",
+"layoutName": "Classic stack",
+"note": "Trajan Sans caps, \"by\" in Lovelace italic",
+"desc": "holiday",
+"file": "logos/r2/lockups/now-soft-classic-holiday.svg",
+"ar": 1.2969
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "classic",
+"layoutName": "Classic stack",
+"note": "Trajan Sans caps, \"by\" in Lovelace italic",
+"desc": "pyramid",
+"file": "logos/r2/lockups/now-soft-classic-pyramid.svg",
+"ar": 1.3003
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "starrule",
+"layoutName": "Star rule",
+"note": "Novecento caps between rules, with the RASA logo",
+"desc": "holiday",
+"file": "logos/r2/lockups/now-soft-starrule-holiday.svg",
+"ar": 1.2531
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "starrule",
+"layoutName": "Star rule",
+"note": "Novecento caps between rules, with the RASA logo",
+"desc": "pyramid",
+"file": "logos/r2/lockups/now-soft-starrule-pyramid.svg",
+"ar": 1.2528
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "horizontal",
+"layoutName": "Horizontal",
+"note": "Mark beside the event name, for banners and signage",
+"desc": "holiday",
+"file": "logos/r2/lockups/now-soft-horizontal-holiday.svg",
+"ar": 2.5718
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "horizontal",
+"layoutName": "Horizontal",
+"note": "Mark beside the event name, for banners and signage",
+"desc": "pyramid",
+"file": "logos/r2/lockups/now-soft-horizontal-pyramid.svg",
+"ar": 2.7974
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "presents",
+"layoutName": "RASA presents",
+"note": "RASA logo on top, event name in Lovelace",
+"desc": "holiday",
+"file": "logos/r2/lockups/now-soft-presents-holiday.svg",
+"ar": 1.1915
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "presents",
+"layoutName": "RASA presents",
+"note": "RASA logo on top, event name in Lovelace",
+"desc": "pyramid",
+"file": "logos/r2/lockups/now-soft-presents-pyramid.svg",
+"ar": 1.1861
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "arch",
+"layoutName": "Arch",
+"note": "Event name arched over the mark, like a seal",
+"desc": "holiday",
+"file": "logos/r2/lockups/now-soft-arch-holiday.svg",
+"ar": 1.2504
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "arch",
+"layoutName": "Arch",
+"note": "Event name arched over the mark, like a seal",
+"desc": "pyramid",
+"file": "logos/r2/lockups/now-soft-arch-pyramid.svg",
+"ar": 1.2504
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "script",
+"layoutName": "Script",
+"note": "Event name in Lovelace Script under the mark",
+"desc": "holiday",
+"file": "logos/r2/lockups/now-soft-script-holiday.svg",
+"ar": 1.2338
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "script",
+"layoutName": "Script",
+"note": "Event name in Lovelace Script under the mark",
+"desc": "pyramid",
+"file": "logos/r2/lockups/now-soft-script-pyramid.svg",
+"ar": 1.2483
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "pill",
+"layoutName": "Pill tag",
+"note": "Event name in an outlined pill, RASA in Acid Grotesk",
+"desc": "holiday",
+"file": "logos/r2/lockups/now-soft-pill-holiday.svg",
+"ar": 1.2731
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "pill",
+"layoutName": "Pill tag",
+"note": "Event name in an outlined pill, RASA in Acid Grotesk",
+"desc": "pyramid",
+"file": "logos/r2/lockups/now-soft-pill-pyramid.svg",
+"ar": 1.2731
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "brand",
+"layoutName": "RASA type",
+"note": "Event name in Acid Grotesk, RASA in Sofia Pro",
+"desc": "holiday",
+"file": "logos/r2/lockups/now-soft-brand-holiday.svg",
+"ar": 1.3471
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "brand",
+"layoutName": "RASA type",
+"note": "Event name in Acid Grotesk, RASA in Sofia Pro",
+"desc": "pyramid",
+"file": "logos/r2/lockups/now-soft-brand-pyramid.svg",
+"ar": 1.3471
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "logorow",
+"layoutName": "Logo row",
+"note": "Event name and RASA logo side by side",
+"desc": "holiday",
+"file": "logos/r2/lockups/now-soft-logorow-holiday.svg",
+"ar": 1.4592
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "logorow",
+"layoutName": "Logo row",
+"note": "Event name and RASA logo side by side",
+"desc": "pyramid",
+"file": "logos/r2/lockups/now-soft-logorow-pyramid.svg",
+"ar": 1.4667
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "beacon",
+"layoutName": "Beacon",
+"note": "The Pyramid with a fan of light over the event name",
+"desc": "holiday",
+"file": "logos/r2/lockups/now-soft-beacon-holiday.svg",
+"ar": 0.8099
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "beacon",
+"layoutName": "Beacon",
+"note": "The Pyramid with a fan of light over the event name",
+"desc": "pyramid",
+"file": "logos/r2/lockups/now-soft-beacon-pyramid.svg",
+"ar": 0.8123
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "classic",
+"layoutName": "Classic stack",
+"note": "Trajan Sans caps, \"by\" in Lovelace italic",
+"desc": "holiday",
+"file": "logos/r2/lockups/now-clean-classic-holiday.svg",
+"ar": 1.3678
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "classic",
+"layoutName": "Classic stack",
+"note": "Trajan Sans caps, \"by\" in Lovelace italic",
+"desc": "pyramid",
+"file": "logos/r2/lockups/now-clean-classic-pyramid.svg",
+"ar": 1.3717
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "starrule",
+"layoutName": "Star rule",
+"note": "Novecento caps between rules, with the RASA logo",
+"desc": "holiday",
+"file": "logos/r2/lockups/now-clean-starrule-holiday.svg",
+"ar": 1.3192
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "starrule",
+"layoutName": "Star rule",
+"note": "Novecento caps between rules, with the RASA logo",
+"desc": "pyramid",
+"file": "logos/r2/lockups/now-clean-starrule-pyramid.svg",
+"ar": 1.3189
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "horizontal",
+"layoutName": "Horizontal",
+"note": "Mark beside the event name, for banners and signage",
+"desc": "holiday",
+"file": "logos/r2/lockups/now-clean-horizontal-holiday.svg",
+"ar": 2.6753
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "horizontal",
+"layoutName": "Horizontal",
+"note": "Mark beside the event name, for banners and signage",
+"desc": "pyramid",
+"file": "logos/r2/lockups/now-clean-horizontal-pyramid.svg",
+"ar": 2.8941
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "presents",
+"layoutName": "RASA presents",
+"note": "RASA logo on top, event name in Lovelace",
+"desc": "holiday",
+"file": "logos/r2/lockups/now-clean-presents-holiday.svg",
+"ar": 1.2511
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "presents",
+"layoutName": "RASA presents",
+"note": "RASA logo on top, event name in Lovelace",
+"desc": "pyramid",
+"file": "logos/r2/lockups/now-clean-presents-pyramid.svg",
+"ar": 1.2452
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "arch",
+"layoutName": "Arch",
+"note": "Event name arched over the mark, like a seal",
+"desc": "holiday",
+"file": "logos/r2/lockups/now-clean-arch-holiday.svg",
+"ar": 1.3163
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "arch",
+"layoutName": "Arch",
+"note": "Event name arched over the mark, like a seal",
+"desc": "pyramid",
+"file": "logos/r2/lockups/now-clean-arch-pyramid.svg",
+"ar": 1.3163
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "script",
+"layoutName": "Script",
+"note": "Event name in Lovelace Script under the mark",
+"desc": "holiday",
+"file": "logos/r2/lockups/now-clean-script-holiday.svg",
+"ar": 1.2979
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "script",
+"layoutName": "Script",
+"note": "Event name in Lovelace Script under the mark",
+"desc": "pyramid",
+"file": "logos/r2/lockups/now-clean-script-pyramid.svg",
+"ar": 1.3139
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "pill",
+"layoutName": "Pill tag",
+"note": "Event name in an outlined pill, RASA in Acid Grotesk",
+"desc": "holiday",
+"file": "logos/r2/lockups/now-clean-pill-holiday.svg",
+"ar": 1.3414
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "pill",
+"layoutName": "Pill tag",
+"note": "Event name in an outlined pill, RASA in Acid Grotesk",
+"desc": "pyramid",
+"file": "logos/r2/lockups/now-clean-pill-pyramid.svg",
+"ar": 1.3414
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "brand",
+"layoutName": "RASA type",
+"note": "Event name in Acid Grotesk, RASA in Sofia Pro",
+"desc": "holiday",
+"file": "logos/r2/lockups/now-clean-brand-holiday.svg",
+"ar": 1.4239
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "brand",
+"layoutName": "RASA type",
+"note": "Event name in Acid Grotesk, RASA in Sofia Pro",
+"desc": "pyramid",
+"file": "logos/r2/lockups/now-clean-brand-pyramid.svg",
+"ar": 1.4239
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "logorow",
+"layoutName": "Logo row",
+"note": "Event name and RASA logo side by side",
+"desc": "holiday",
+"file": "logos/r2/lockups/now-clean-logorow-holiday.svg",
+"ar": 1.5496
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "logorow",
+"layoutName": "Logo row",
+"note": "Event name and RASA logo side by side",
+"desc": "pyramid",
+"file": "logos/r2/lockups/now-clean-logorow-pyramid.svg",
+"ar": 1.5582
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "beacon",
+"layoutName": "Beacon",
+"note": "The Pyramid with a fan of light over the event name",
+"desc": "holiday",
+"file": "logos/r2/lockups/now-clean-beacon-holiday.svg",
+"ar": 0.8356
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "beacon",
+"layoutName": "Beacon",
+"note": "The Pyramid with a fan of light over the event name",
+"desc": "pyramid",
+"file": "logos/r2/lockups/now-clean-beacon-pyramid.svg",
+"ar": 0.8382
+}
+]

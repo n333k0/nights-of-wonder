@@ -61,6 +61,11 @@ section{padding-top:6rem}
 .fav[aria-pressed="true"]{background:var(--gold); color:#1a1205; border-color:var(--gold)}
 .tiles{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:.6rem}
 .tiles.two{grid-template-columns:repeat(2, minmax(0,1fr))}
+.tiles.four{grid-template-columns:repeat(4, minmax(0,1fr))}
+@media (max-width:1100px){.tiles.four{grid-template-columns:repeat(2, minmax(0,1fr))}}
+.finishes{display:flex; flex-wrap:wrap; gap:.4rem; margin:0 0 .8rem}
+.fin{font:inherit; font-size:.74rem; padding:.42rem .8rem; border-radius:999px; border:1px solid var(--line); background:transparent; color:inherit; cursor:pointer}
+.fin[aria-pressed="true"]{background:#f1e3c8; color:#1a1210; border-color:#f1e3c8}
 .tile{position:relative; aspect-ratio:4/3.2; border-radius:10px; overflow:hidden; display:grid; place-items:center; max-width:100%}
 .tiles.two .tile{aspect-ratio:16/10}
 .tile .tl{position:absolute; left:.7rem; top:.55rem; font-family:var(--mono); font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; opacity:.55; z-index:2}
@@ -74,7 +79,7 @@ section{padding-top:6rem}
 .tile img.r3d{position:relative; width:78%; max-height:78%; object-fit:contain; filter:drop-shadow(0 14px 22px rgba(0,0,0,.45))}
 .tile img.r3d.soft{filter:drop-shadow(0 12px 18px rgba(60,30,10,.28))}
 @media (max-width:1100px){.opt{grid-template-columns:1fr}}
-@media (max-width:640px){.tiles{grid-template-columns:1fr} .tiles.two{grid-template-columns:1fr}}
+@media (max-width:640px){.tiles{grid-template-columns:1fr} .tiles.two, .tiles.four{grid-template-columns:1fr}}
 
 .mgrid{display:grid; grid-template-columns:repeat(12, minmax(0,1fr)); gap:1rem}
 .card{position:relative; border-radius:14px; overflow:hidden; background:var(--panel); min-width:0; margin:0}
@@ -93,10 +98,100 @@ footer{padding:6rem 0 4rem; display:grid; gap:2rem}
 .cta-big{border-radius:18px; background:var(--red); padding:3rem var(--gut); display:flex; flex-wrap:wrap; justify-content:space-between; align-items:end; gap:2rem}
 .cta-big h2{font-size:clamp(2rem,4vw,3.8rem); line-height:1; max-width:16ch}
 footer .end{display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem; border-top:1px solid var(--line); padding-top:1.4rem; color:var(--mute); font-size:.8rem}
+
+/* ---------- Revision 2: lockups ---------- */
+.r2hero{position:relative; min-height:min(92vh, 62rem); display:grid; overflow:hidden; background:#140608}
+.r2hero img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
+.r2hero .in{position:relative; display:flex; flex-direction:column; justify-content:flex-end; padding:6.5rem var(--gut) 2.2rem; gap:1rem; background:linear-gradient(to top, rgba(10,4,6,.82), rgba(10,4,6,0) 46%)}
+.r2fb{position:absolute; inset:0; display:grid; justify-items:center; align-items:start; padding-top:5.2rem; background:radial-gradient(80% 70% at 50% 35%, #6a1428, #1c0509); color:#f1e3c8}
+.r2fb .m{width:min(64vw, 36rem); height:calc(100% - 22rem); min-height:9rem; background:currentColor; -webkit-mask:var(--m) center/contain no-repeat; mask:var(--m) center/contain no-repeat}
+.r2hero .rev{font-family:var(--mono); font-size:.75rem; letter-spacing:.16em; text-transform:uppercase; color:#f1e3c8}
+.r2hero h1{font-size:clamp(2.2rem, 5vw, 5rem); line-height:.98; max-width:18ch}
+.r2hero p{max-width:58ch; color:rgba(255,255,255,.85)}
+.r2hero .acts{display:flex; flex-wrap:wrap; gap:.6rem; margin-top:.4rem}
+.ctrl{display:flex; flex-wrap:wrap; gap:1rem 2rem; margin:0 0 1.4rem; align-items:center}
+.ctrl .grp{display:flex; flex-wrap:wrap; gap:.4rem; align-items:center}
+.ctrl .lab{font-family:var(--mono); font-size:.66rem; letter-spacing:.12em; text-transform:uppercase; color:var(--mute); margin-right:.3rem}
+.seg{font:inherit; font-size:.78rem; padding:.42rem .85rem; border-radius:999px; border:1px solid var(--line); background:transparent; color:inherit; cursor:pointer}
+.seg[aria-pressed="true"]{background:#f1e3c8; color:#1a1210; border-color:#f1e3c8}
+.lgrid{display:grid; grid-template-columns:repeat(auto-fill, minmax(min(100%, 22rem), 1fr)); gap:1rem}
+.lk{border-radius:14px; overflow:hidden; display:grid; grid-template-rows:auto auto; background:var(--panel)}
+.lk .art{aspect-ratio:5/4; display:grid; place-items:center; background:var(--lbg); color:var(--lfg); transition:background .25s, color .25s}
+.lk .art .m{width:76%; height:76%; background:currentColor; -webkit-mask:var(--m) center/contain no-repeat; mask:var(--m) center/contain no-repeat}
+.lk .cap{display:flex; justify-content:space-between; align-items:center; gap:.8rem; padding:.8rem 1rem}
+.lk .cap b{font-weight:500; font-size:.95rem; display:block}
+.lk .cap small{color:var(--mute); font-size:.76rem; display:block; line-height:1.35}
+.lk .cap .btn{font-size:.74rem; padding:.42em .85em; flex:none}
+.marks3{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:1rem}
+@media (max-width:900px){.marks3{grid-template-columns:1fr}}
+.springs{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:.6rem; margin-top:1rem}
+@media (max-width:760px){.springs{grid-template-columns:1fr}}
+.springs .art{aspect-ratio:2/1.15}
+.chromegrid{display:grid; grid-template-columns:repeat(auto-fill, minmax(min(100%, 26rem), 1fr)); gap:1rem}
+.chromegrid figure{margin:0; border-radius:14px; overflow:hidden; background:radial-gradient(90% 80% at 50% 40%, #3a0a16, #12050a); aspect-ratio:5/4; display:grid; place-items:center; position:relative}
+.chromegrid figure.blk{background:radial-gradient(90% 80% at 50% 40%, #1d1a1a, #050505)}
+.chromegrid img{width:86%; max-height:86%; object-fit:contain; filter:drop-shadow(0 18px 26px rgba(0,0,0,.5))}
+.chromegrid figcaption{position:absolute; left:1rem; bottom:.8rem; font-family:var(--mono); font-size:.64rem; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.85)}
+.revsep{margin-top:7rem; padding:2.4rem 0 0; border-top:1px solid var(--line); display:flex; justify-content:space-between; flex-wrap:wrap; gap:1rem; align-items:end}
+.revsep h2{font-size:clamp(1.8rem,3.6vw,3.4rem); line-height:1}
+.revsep p{color:var(--mute); max-width:52ch}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 
-<nav class="nav" id="nav"><b>RemotoLabs®</b><div class="links"><a href="#logos">Logos</a><a href="#three-d">3D</a><a href="#use">Mockups</a></div><a class="btn solid" href="proposal.html">Proposal →</a></nav>
+<nav class="nav" id="nav"><b>RemotoLabs®</b><div class="links"><a href="#lockups">Lockups</a><a href="#marks">Marks</a><a href="#chrome">Chrome</a><a href="#rev1">Revision 1</a></div><a class="btn solid" href="proposal.html">Proposal →</a></nav>
+
+<header class="r2hero bleed" id="r2">
+  <div class="r2fb" aria-hidden="true"><div class="m" style="--m:url('logos/r2/lockups/now-warm-classic-holiday.svg')"></div></div>
+  <img src="img/hero/hero-stage-champagne.jpg" alt="Nights of Wonder in inflated champagne chrome on a burgundy velvet stage with gold ornaments and warm lights" onerror="this.remove()">
+  <div class="in">
+    <p class="rev">Revision 2 · November 17</p>
+    <h1>Nights of Wonder, as a lockup system.</h1>
+    <p>Built on the two marks RASA picked: Warm Holiday Lettering and Festive Classic, with its N and W springs toned down. Every lockup takes an interchangeable event line, so Holiday Market can become Pyramid of Light or the next location, always signed by RASA.</p>
+    <div class="acts"><a class="btn solid" href="#lockups">See the lockups</a><a class="btn" style="color:#fff;border-color:rgba(255,255,255,.4)" href="logos/r2/nights-of-wonder-r2-lockups-svg.zip" download>Download all SVGs (.zip)</a></div>
+  </div>
+</header>
+
+<div class="wrap">
+<section id="lockups">
+  <div class="sh">
+    <div><p class="eyebrow">Revision 2 · Lockups</p><h2>One name, any event.</h2></div>
+    <p>Ten layouts for each of the three marks. Switch the event line, the mark and the colourway; every card downloads a clean vector SVG in the colour you see. All type is converted to outlines, so the files open anywhere without fonts.</p>
+  </div>
+  <div class="ctrl">
+    <div class="grp" data-ctl="desc"><span class="lab">Event line</span><button class="seg" aria-pressed="true" data-v="holiday">Holiday Market</button><button class="seg" aria-pressed="false" data-v="pyramid">Pyramid of Light</button></div>
+    <div class="grp" data-ctl="mark"><span class="lab">Mark</span><button class="seg" aria-pressed="true" data-v="all">All</button><button class="seg" aria-pressed="false" data-v="warm">Warm Holiday Lettering</button><button class="seg" aria-pressed="false" data-v="soft">Festive Classic, soft</button><button class="seg" aria-pressed="false" data-v="clean">Festive Classic, clean</button></div>
+    <div class="grp" data-ctl="cw"><span class="lab">Colour</span><button class="seg" aria-pressed="true" data-v="cream">Burgundy on cream</button><button class="seg" aria-pressed="false" data-v="burg">Champagne on burgundy</button><button class="seg" aria-pressed="false" data-v="black">Champagne on black</button><button class="seg" aria-pressed="false" data-v="white">Black on white</button></div>
+  </div>
+  <div class="lgrid" id="lgrid"></div>
+</section>
+
+<section id="marks">
+  <div class="sh">
+    <div><p class="eyebrow">Revision 2 · Marks</p><h2>Fewer springs, same sparkle.</h2></div>
+    <p>RASA liked Festive Classic but found the curls on the N and W too loud, a little Willy Wonka. Soft trims both curls back to short calligraphic flicks; Clean also cuts the N's tall flourish to cap height. Warm Holiday Lettering stays as it was.</p>
+  </div>
+  <div class="springs">
+    <div class="lk"><div class="art" style="--lbg:#f5eee2;--lfg:#5c0c1e"><div class="m" style="--m:url('logos/v2/nights-of-wonder-original-01.svg')"></div></div><div class="cap"><div><b>Before</b><small>Festive Classic, round one</small></div></div></div>
+    <div class="lk"><div class="art" style="--lbg:#f5eee2;--lfg:#5c0c1e"><div class="m" style="--m:url('logos/r2/lockups/now-soft-mark.svg')"></div></div><div class="cap"><div><b>Soft</b><small>Curls trimmed to flicks</small></div><button class="btn dl" type="button" data-file="logos/r2/lockups/now-soft-mark.svg" data-name="nights-of-wonder-festive-classic-soft">SVG</button></div></div>
+    <div class="lk"><div class="art" style="--lbg:#f5eee2;--lfg:#5c0c1e"><div class="m" style="--m:url('logos/r2/lockups/now-clean-mark.svg')"></div></div><div class="cap"><div><b>Clean</b><small>Curls and N flourish trimmed</small></div><button class="btn dl" type="button" data-file="logos/r2/lockups/now-clean-mark.svg" data-name="nights-of-wonder-festive-classic-clean">SVG</button></div></div>
+  </div>
+  <div class="springs">
+    <div class="lk"><div class="art" style="--lbg:#5c0c1e;--lfg:#f1e3c8"><div class="m" style="--m:url('logos/r2/lockups/now-warm-mark.svg')"></div></div><div class="cap"><div><b>Warm Holiday Lettering</b><small>Unchanged, clean vector</small></div><button class="btn dl" type="button" data-file="logos/r2/lockups/now-warm-mark.svg" data-name="nights-of-wonder-warm-holiday-lettering">SVG</button></div></div>
+    <div class="lk"><div class="art" style="--lbg:#0a0909;--lfg:#f1e3c8"><div class="m" style="--m:url('logos/r2/lockups/now-soft-mark.svg')"></div></div><div class="cap"><div><b>Soft on black</b><small>Festive Classic, soft</small></div></div></div>
+    <div class="lk"><div class="art" style="--lbg:#c4a47c;--lfg:#3a0812"><div class="m" style="--m:url('logos/r2/lockups/now-clean-mark.svg')"></div></div><div class="cap"><div><b>Clean on tan</b><small>Festive Classic, clean</small></div></div></div>
+  </div>
+</section>
+
+<section id="chrome">
+  <div class="sh">
+    <div><p class="eyebrow">Revision 2 · Chrome</p><h2>The lockups as objects.</h2></div>
+    <p>The same inflated chrome treatment as Midnight Sculpture, applied to the new lockups: silver for the classic look, champagne for the burgundy, tan and warm-white palette.</p>
+  </div>
+  <div class="chromegrid" id="chromegrid"></div>
+</section>
+
+<div class="revsep" id="rev1"><div><p class="eyebrow">Earlier rounds</p><h2>Revision 1 and the 3D studies.</h2></div><p>Everything from the first presentation, kept as it was: the seven marks, the 3D treatments, the inflated chrome finishes and the mockups.</p></div>
+</div>
 
 <header class="hero bleed">
   <img class="bg" src="img/pyramid-snow.jpg" alt="Crowd in falling snow at the lit Transamerica Pyramid with holiday trees">
@@ -105,7 +200,7 @@ footer .end{display:flex; flex-wrap:wrap; justify-content:space-between; gap:1re
     <div class="mark"><div class="mlogo" style="--m:url('logos/v2/nights-of-wonder-original-01.svg');--ar:519/267;width:100%;max-height:none" role="img" aria-label="Nights of Wonder"></div></div>
     <div class="meta">
       <p class="big">Redwood Park, Transamerica Pyramid Center · December 10–27, 2026</p>
-      <p>Logo options for RASA: seven marks and two 3D treatments, all for Nights of Wonder.</p>
+      <p>Revision 1: logo options for RASA, seven marks and the 3D treatments, all for Nights of Wonder.</p>
     </div>
   </div>
 </header>
@@ -122,7 +217,7 @@ footer .end{display:flex; flex-wrap:wrap; justify-content:space-between; gap:1re
 <section id="three-d">
   <div class="sh">
     <div><p class="eyebrow">3D treatments</p><h2>Champagne, chrome and wool.</h2></div>
-    <p>The same names turned into objects, for the campaign hero, video and the keepsake box. New from your feedback: Warm Holiday Lettering in champagne chrome, shown on the holiday palette of burgundy, tan and warm white.</p>
+    <p>The same names turned into objects, for the campaign hero, video and the keepsake box. New from your feedback: Warm Holiday Lettering as an inflated chrome object, in eight finishes, on the holiday palette of burgundy, tan and warm white.</p>
   </div>
   <div id="dim"></div>
 </section>
@@ -133,6 +228,11 @@ footer .end{display:flex; flex-wrap:wrap; justify-content:space-between; gap:1re
     <p>Nights of Wonder on the program's photography, the 20 by 30 foot projection wall, merch and the street.</p>
   </div>
   <div class="mgrid">
+    <figure class="card s12"><img src="img/hero/hero-stage-champagne.jpg" onerror="this.closest('figure').remove()" alt="Champagne chrome Nights of Wonder on a lacquered burgundy stage with velvet curtains, gold ornaments and warm lights"><figcaption>Champagne chrome · velvet stage</figcaption></figure>
+    <figure class="card s6"><img src="img/hero/hero-spot-champagne.jpg" onerror="this.closest('figure').remove()" alt="Champagne chrome Nights of Wonder under a single spotlight on a dark burgundy mirror floor"><figcaption>Champagne chrome · spotlight</figcaption></figure>
+    <figure class="card s6"><img src="img/hero/hero-flatlay-champagne.jpg" onerror="this.closest('figure').remove()" alt="Champagne chrome Nights of Wonder lying on draped burgundy satin with pearls and gold ornaments"><figcaption>Champagne chrome · satin and pearls</figcaption></figure>
+    <figure class="card s6"><img src="img/hero/hero-stage-silver.jpg" onerror="this.closest('figure').remove()" alt="Silver chrome Nights of Wonder on the burgundy velvet stage"><figcaption>Silver chrome · velvet stage</figcaption></figure>
+    <figure class="card s6"><img src="img/hero/hero-spot-rose.jpg" onerror="this.closest('figure').remove()" alt="Rose champagne Nights of Wonder under a spotlight on a dark burgundy mirror floor"><figcaption>Rose champagne · spotlight</figcaption></figure>
     <figure class="card s12"><img src="img/mk-chrome-hero.jpg" alt="Nights of Wonder in white beside a chrome star tied with red velvet ribbon"><figcaption>Campaign hero</figcaption></figure>
     <figure class="card s6"><img src="img/mk-cocoa-logo.jpg" alt="Nights of Wonder over a mother and daughter sharing hot chocolate"><figcaption>On photography</figcaption></figure>
     <figure class="card s6"><img src="img/mk-brass-logo.jpg" alt="Nights of Wonder over a brass band playing among the trees"><figcaption>On photography</figcaption></figure>
@@ -160,6 +260,45 @@ footer .end{display:flex; flex-wrap:wrap; justify-content:space-between; gap:1re
 <div class="short" id="short" hidden><span id="shortTxt"></span><button class="btn solid" id="copyShort" type="button">Copy list</button></div>
 
 <script>
+
+/* ---------- Revision 2 ---------- */
+const CW = { cream: ['#f5eee2', '#5c0c1e'], burg: ['#5c0c1e', '#f1e3c8'], black: ['#0a0909', '#f1e3c8'], white: ['#ffffff', '#000000'] };
+const R2 = { desc: 'holiday', mark: 'all', cw: 'cream' };
+let LOCK = [];
+function drawLockups() {
+  const [bg, fg] = CW[R2.cw];
+  const rows = LOCK.filter(o => o.desc === R2.desc && (R2.mark === 'all' || o.mark === R2.mark));
+  document.getElementById('lgrid').innerHTML = rows.map(o => `<div class="lk"><div class="art" style="--lbg:${bg};--lfg:${fg}"><div class="m" role="img" aria-label="Nights of Wonder lockup, ${o.markName}, ${o.layoutName}" style="--m:url('${o.file}')"></div></div>
+    <div class="cap"><div><b>${o.layoutName}</b><small>${o.markName} · ${o.note}</small></div><button class="btn dl" type="button" data-file="${o.file}" data-name="nights-of-wonder-${o.mark}-${o.layout}-${o.desc}">SVG</button></div></div>`).join('');
+}
+fetch('logos/r2/lockups.json').then(r => r.json()).then(m => { LOCK = m; drawLockups(); }).catch(() => {});
+document.querySelectorAll('.ctrl .grp').forEach(g => g.addEventListener('click', e => {
+  const b = e.target.closest('.seg'); if (!b) return;
+  g.querySelectorAll('.seg').forEach(x => x.setAttribute('aria-pressed', x === b));
+  R2[g.dataset.ctl] = b.dataset.v; drawLockups();
+}));
+/* download the SVG in the colour on screen */
+document.addEventListener('click', async e => {
+  const b = e.target.closest('.dl'); if (!b) return;
+  const art = b.closest('.lk').querySelector('.art');
+  const fg = getComputedStyle(art).color;
+  const hex = '#' + (fg.match(/\d+/g) || [0, 0, 0]).slice(0, 3).map(n => (+n).toString(16).padStart(2, '0')).join('');
+  try {
+    const txt = (await (await fetch(b.dataset.file)).text()).replace('fill="currentColor"', `fill="${hex}"`);
+    const url = URL.createObjectURL(new Blob([txt], { type: 'image/svg+xml' }));
+    const a = Object.assign(document.createElement('a'), { href: url, download: b.dataset.name + '.svg' });
+    document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 1500);
+  } catch (err) { location.href = b.dataset.file; }
+});
+const CHROME = [
+  ['soft-classic-holiday', 'silver', 'Festive Classic soft · silver chrome', 'blk'],
+  ['warm-classic-holiday', 'champagne', 'Warm Holiday Lettering · champagne chrome', ''],
+  ['clean-beacon-pyramid', 'silver', 'Pyramid of Light beacon · silver chrome', 'blk'],
+  ['warm-arch-pyramid', 'champagne', 'Pyramid of Light arch · champagne chrome', ''],
+  ['soft-classic-holiday', 'champagne', 'Festive Classic soft · champagne chrome', ''],
+  ['warm-classic-holiday', 'silver', 'Warm Holiday Lettering · silver chrome', 'blk']
+];
+document.getElementById('chromegrid').innerHTML = CHROME.map(([n, f, c, k]) => `<figure class="${k}"><img src="img/r2chrome/${n}-${f}.webp" alt="Nights of Wonder lockup, ${c}" loading="lazy" onerror="this.closest('figure').remove()"><figcaption>${c}</figcaption></figure>`).join('');
 /* ---------- redrawn Pyramid marks (N03, N04) ---------- */
 let UID = 0;
 const P = pts => 'M' + pts.map(p => p.map(n => +n.toFixed(2)).join(' ')).join('L') + 'Z';
@@ -214,8 +353,9 @@ const FLAT = [
   { no: 'N07', name: 'The Soft Season', why: 'Rounded lowercase and a small star, warm enough to knit onto a beanie.', m: 'logos/v2/knit-flat-nights.svg', ar: '702/315', photo: 'pr-sax', alt: 'Saxophonist in the snow' }
 ];
 const DIM = [
-  { no: '3D-3', fresh: true, name: 'Warm Holiday Lettering, champagne chrome', why: 'The N02 script as polished champagne metal: pale gold with warm-white highlights, made for burgundy and velvet.', img: 'img/champagne/n02-champagne-polished.webp',
-    bgs: [['Burgundy', '#5c0c1e', '#fff'], ['Tan', '#c4a47c', '#2a1a10'], ['Warm white', '#f5eee2', '#2a1a10']] },
+  { no: '3D-3', fresh: true, name: 'Warm Holiday Lettering, inflated chrome', why: 'The N02 script blown up into a puffy, mirror-polished object. Pick a finish; champagne chrome is the lead for the burgundy, tan and warm-white palette.', img: 'img/inflated/n02-champagne.webp',
+    bgs: [['Burgundy', '#5c0c1e', '#fff'], ['Tan', '#c4a47c', '#2a1a10'], ['Warm white', '#f5eee2', '#2a1a10'], ['Black', '#000', '#fff']],
+    finishes: [['champagne', 'Champagne chrome'], ['silver', 'Silver chrome'], ['rose', 'Rose champagne'], ['glitter', 'Champagne glitter'], ['pearl', 'Pearl'], ['velvet', 'Burgundy velvet'], ['enamel', 'Burgundy enamel'], ['ruby', 'Ruby glass']] },
   { no: '3D-1', name: 'Midnight Sculpture, chrome', why: 'Polished silver lettering. Pairs with the chrome star and velvet ribbon.', img: 'img/old-chrome-nights-hd.webp' },
   { no: '3D-2', name: 'The Soft Season, knit', why: 'Red wool lettering with a felt star; the friendlier of the two.', img: 'img/old-knit-nights-hd.webp' }
 ];
@@ -232,11 +372,19 @@ document.getElementById('flat').innerHTML = FLAT.map(o => `<article class="opt">
     <div class="tile t-photo"><img class="ph" src="img/${o.photo}.jpg" alt="${o.alt}" loading="lazy"><div class="scrim"></div><span class="tl">Photo</span>${mask(o)}</div>
   </div></article>`).join('');
 document.getElementById('dim').innerHTML = DIM.map(o => `<article class="opt">${info(o, '<span class="tag">3D</span>' + (o.fresh ? '<span class="tag">New</span>' : ''))}
-  ${o.bgs ? `<div class="tiles">${o.bgs.map(([l, bg, fg]) => `<div class="tile" style="background:${bg};color:${fg}"><span class="tl">${l}</span><img class="r3d${fg === '#fff' ? '' : ' soft'}" src="${o.img}" alt="${o.name} on ${l.toLowerCase()}"></div>`).join('')}</div>` : `<div class="tiles two">
+  ${o.finishes ? `<div class="finishes" role="group" aria-label="Finish">${o.finishes.map(([k, l], i) => `<button type="button" class="fin" aria-pressed="${i === 0}" data-img="img/inflated/n02-${k}.webp" data-label="${l}">${l}</button>`).join('')}</div>` : ''}
+  ${o.bgs ? `<div class="tiles${o.bgs.length === 4 ? ' four' : ''}">${o.bgs.map(([l, bg, fg]) => `<div class="tile" style="background:${bg};color:${fg}"><span class="tl">${l}</span><img class="r3d${fg === '#fff' ? '' : ' soft'}" src="${o.img}" alt="${o.name} on ${l.toLowerCase()}" onerror="const r=this.closest('.opt'); if(r) r.remove()"></div>`).join('')}</div>` : `<div class="tiles two">
     <div class="tile t-black"><span class="tl">Black</span><img class="r3d" src="${o.img}" alt="${o.name}"></div>
     <div class="tile t-red"><span class="tl">Red</span><img class="r3d" src="${o.img}" alt="${o.name}"></div>
   </div>`}</article>`).join('');
 
+/* finish switcher: swaps the render in every tile of that row */
+document.addEventListener('click', e => {
+  const f = e.target.closest('.fin'); if (!f) return;
+  const row = f.closest('.opt');
+  row.querySelectorAll('.fin').forEach(x => x.setAttribute('aria-pressed', x === f));
+  row.querySelectorAll('img.r3d').forEach(im => { im.src = f.dataset.img; im.alt = 'Nights of Wonder, ' + f.dataset.label; });
+});
 /* shortlist */
 function syncShort() {
   document.getElementById('short').hidden = !favs.length;
