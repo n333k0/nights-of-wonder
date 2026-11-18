@@ -1,0 +1,326 @@
+[
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "classic",
+"layoutName": "Classic stack",
+"note": "Trajan Sans caps under the mark",
+"file": "logos/r3/lockups/now-pyramid-of-light-warm-classic.svg",
+"ar": 1.3386
+},
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "starrule",
+"layoutName": "Star rule",
+"note": "Novecento caps under a star and two rules",
+"file": "logos/r3/lockups/now-pyramid-of-light-warm-starrule.svg",
+"ar": 1.2673
+},
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "horizontal",
+"layoutName": "Horizontal",
+"note": "Mark beside PYRAMID / OF LIGHT, for banners",
+"file": "logos/r3/lockups/now-pyramid-of-light-warm-horizontal.svg",
+"ar": 2.5421
+},
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "serif",
+"layoutName": "Serif",
+"note": "Pyramid of Light in Lovelace, mixed case",
+"file": "logos/r3/lockups/now-pyramid-of-light-warm-serif.svg",
+"ar": 1.2534
+},
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "script",
+"layoutName": "Script",
+"note": "Pyramid of Light in Lovelace Script",
+"file": "logos/r3/lockups/now-pyramid-of-light-warm-script.svg",
+"ar": 1.2339
+},
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "arch",
+"layoutName": "Arch",
+"note": "The event name arched over the mark",
+"file": "logos/r3/lockups/now-pyramid-of-light-warm-arch.svg",
+"ar": 1.265
+},
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "pill",
+"layoutName": "Pill tag",
+"note": "The event name in an outlined pill",
+"file": "logos/r3/lockups/now-pyramid-of-light-warm-pill.svg",
+"ar": 1.2508
+},
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "beacon",
+"layoutName": "Beacon",
+"note": "The Pyramid and its fan of light over the name",
+"file": "logos/r3/lockups/now-pyramid-of-light-warm-beacon.svg",
+"ar": 0.8119
+},
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "halo",
+"layoutName": "Halo",
+"note": "A fan of light rising behind the mark",
+"file": "logos/r3/lockups/now-pyramid-of-light-warm-halo.svg",
+"ar": 0.9354
+},
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "eyebrow",
+"layoutName": "Eyebrow",
+"note": "The event name on top, between rules",
+"file": "logos/r3/lockups/now-pyramid-of-light-warm-eyebrow.svg",
+"ar": 1.4126
+},
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "pyramids",
+"layoutName": "Pyramid bullets",
+"note": "Two small Pyramids flank the name",
+"file": "logos/r3/lockups/now-pyramid-of-light-warm-pyramids.svg",
+"ar": 1.3845
+},
+{
+"mark": "warm",
+"markName": "Warm Holiday Lettering",
+"layout": "seal",
+"layoutName": "Seal",
+"note": "A round badge: name on the ring, Pyramid at the base",
+"file": "logos/r3/lockups/now-pyramid-of-light-warm-seal.svg",
+"ar": 1.0
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "classic",
+"layoutName": "Classic stack",
+"note": "Trajan Sans caps under the mark",
+"file": "logos/r3/lockups/now-pyramid-of-light-soft-classic.svg",
+"ar": 1.4641
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "starrule",
+"layoutName": "Star rule",
+"note": "Novecento caps under a star and two rules",
+"file": "logos/r3/lockups/now-pyramid-of-light-soft-starrule.svg",
+"ar": 1.3794
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "horizontal",
+"layoutName": "Horizontal",
+"note": "Mark beside PYRAMID / OF LIGHT, for banners",
+"file": "logos/r3/lockups/now-pyramid-of-light-soft-horizontal.svg",
+"ar": 2.6759
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "serif",
+"layoutName": "Serif",
+"note": "Pyramid of Light in Lovelace, mixed case",
+"file": "logos/r3/lockups/now-pyramid-of-light-soft-serif.svg",
+"ar": 1.3629
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "script",
+"layoutName": "Script",
+"note": "Pyramid of Light in Lovelace Script",
+"file": "logos/r3/lockups/now-pyramid-of-light-soft-script.svg",
+"ar": 1.3398
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "arch",
+"layoutName": "Arch",
+"note": "The event name arched over the mark",
+"file": "logos/r3/lockups/now-pyramid-of-light-soft-arch.svg",
+"ar": 1.3765
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "pill",
+"layoutName": "Pill tag",
+"note": "The event name in an outlined pill",
+"file": "logos/r3/lockups/now-pyramid-of-light-soft-pill.svg",
+"ar": 1.3598
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "beacon",
+"layoutName": "Beacon",
+"note": "The Pyramid and its fan of light over the name",
+"file": "logos/r3/lockups/now-pyramid-of-light-soft-beacon.svg",
+"ar": 0.8542
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "halo",
+"layoutName": "Halo",
+"note": "A fan of light rising behind the mark",
+"file": "logos/r3/lockups/now-pyramid-of-light-soft-halo.svg",
+"ar": 0.9945
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "eyebrow",
+"layoutName": "Eyebrow",
+"note": "The event name on top, between rules",
+"file": "logos/r3/lockups/now-pyramid-of-light-soft-eyebrow.svg",
+"ar": 1.549
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "pyramids",
+"layoutName": "Pyramid bullets",
+"note": "Two small Pyramids flank the name",
+"file": "logos/r3/lockups/now-pyramid-of-light-soft-pyramids.svg",
+"ar": 1.514
+},
+{
+"mark": "soft",
+"markName": "Festive Classic, soft",
+"layout": "seal",
+"layoutName": "Seal",
+"note": "A round badge: name on the ring, Pyramid at the base",
+"file": "logos/r3/lockups/now-pyramid-of-light-soft-seal.svg",
+"ar": 1.0
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "classic",
+"layoutName": "Classic stack",
+"note": "Trajan Sans caps under the mark",
+"file": "logos/r3/lockups/now-pyramid-of-light-clean-classic.svg",
+"ar": 1.5552
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "starrule",
+"layoutName": "Star rule",
+"note": "Novecento caps under a star and two rules",
+"file": "logos/r3/lockups/now-pyramid-of-light-clean-starrule.svg",
+"ar": 1.4599
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "horizontal",
+"layoutName": "Horizontal",
+"note": "Mark beside PYRAMID / OF LIGHT, for banners",
+"file": "logos/r3/lockups/now-pyramid-of-light-clean-horizontal.svg",
+"ar": 2.7762
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "serif",
+"layoutName": "Serif",
+"note": "Pyramid of Light in Lovelace, mixed case",
+"file": "logos/r3/lockups/now-pyramid-of-light-clean-serif.svg",
+"ar": 1.4415
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "script",
+"layoutName": "Script",
+"note": "Pyramid of Light in Lovelace Script",
+"file": "logos/r3/lockups/now-pyramid-of-light-clean-script.svg",
+"ar": 1.4157
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "arch",
+"layoutName": "Arch",
+"note": "The event name arched over the mark",
+"file": "logos/r3/lockups/now-pyramid-of-light-clean-arch.svg",
+"ar": 1.4568
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "pill",
+"layoutName": "Pill tag",
+"note": "The event name in an outlined pill",
+"file": "logos/r3/lockups/now-pyramid-of-light-clean-pill.svg",
+"ar": 1.4381
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "beacon",
+"layoutName": "Beacon",
+"note": "The Pyramid and its fan of light over the name",
+"file": "logos/r3/lockups/now-pyramid-of-light-clean-beacon.svg",
+"ar": 0.8833
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "halo",
+"layoutName": "Halo",
+"note": "A fan of light rising behind the mark",
+"file": "logos/r3/lockups/now-pyramid-of-light-clean-halo.svg",
+"ar": 1.0357
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "eyebrow",
+"layoutName": "Eyebrow",
+"note": "The event name on top, between rules",
+"file": "logos/r3/lockups/now-pyramid-of-light-clean-eyebrow.svg",
+"ar": 1.6484
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "pyramids",
+"layoutName": "Pyramid bullets",
+"note": "Two small Pyramids flank the name",
+"file": "logos/r3/lockups/now-pyramid-of-light-clean-pyramids.svg",
+"ar": 1.6079
+},
+{
+"mark": "clean",
+"markName": "Festive Classic, clean",
+"layout": "seal",
+"layoutName": "Seal",
+"note": "A round badge: name on the ring, Pyramid at the base",
+"file": "logos/r3/lockups/now-pyramid-of-light-clean-seal.svg",
+"ar": 1.0
+}
+]

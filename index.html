@@ -99,6 +99,22 @@ footer{padding:6rem 0 4rem; display:grid; gap:2rem}
 .cta-big h2{font-size:clamp(2rem,4vw,3.8rem); line-height:1; max-width:16ch}
 footer .end{display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem; border-top:1px solid var(--line); padding-top:1.4rem; color:var(--mute); font-size:.8rem}
 
+
+/* ---------- Revision 3: Pyramid of Light ---------- */
+.r3hero{position:relative; min-height:min(92vh, 62rem); display:grid; overflow:hidden; background:radial-gradient(80% 70% at 50% 34%, #6a1428, #1c0509); color:#f1e3c8}
+.r3hero .art{position:absolute; inset:0; display:grid; justify-items:center; align-items:start; padding-top:5.2rem}
+.r3hero .art > *{grid-area:1/1; width:min(66vw, 38rem); height:calc(100% - 25rem); min-height:10rem}
+.r3hero .art .m{background:currentColor; -webkit-mask:var(--m) center/contain no-repeat; mask:var(--m) center/contain no-repeat}
+.r3hero .art img{object-fit:contain; filter:drop-shadow(0 24px 40px rgba(0,0,0,.55))}
+.r3hero .in{position:relative; display:flex; flex-direction:column; justify-content:flex-end; padding:6.5rem var(--gut) 2.2rem; gap:1rem}
+.r3hero .rev{font-family:var(--mono); font-size:.75rem; letter-spacing:.16em; text-transform:uppercase}
+.r3hero h1{font-size:clamp(2.2rem, 5vw, 5rem); line-height:.98; max-width:20ch; color:#fff}
+.r3hero p{max-width:58ch; color:rgba(255,255,255,.85)}
+.r3hero .acts{display:flex; flex-wrap:wrap; gap:.6rem; margin-top:.4rem}
+.quote{border-left:2px solid #f1e3c8; padding:.2rem 0 .2rem 1rem; font-family:var(--serif); font-style:italic; font-size:1.15rem; color:#fff; max-width:52ch}
+.revbar{margin:7rem 0 2.4rem; padding-top:2.4rem; border-top:1px solid var(--line); display:flex; justify-content:space-between; flex-wrap:wrap; gap:1rem; align-items:end}
+.revbar h2{font-size:clamp(1.8rem,3.6vw,3.4rem); line-height:1}
+.revbar p{color:var(--mute); max-width:52ch}
 /* ---------- Revision 2: lockups ---------- */
 .r2hero{position:relative; min-height:min(92vh, 62rem); display:grid; overflow:hidden; background:#140608}
 .r2hero img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
@@ -138,7 +154,42 @@ footer .end{display:flex; flex-wrap:wrap; justify-content:space-between; gap:1re
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 
-<nav class="nav" id="nav"><b>RemotoLabs®</b><div class="links"><a href="#lockups">Lockups</a><a href="#marks">Marks</a><a href="#chrome">Chrome</a><a href="#rev1">Revision 1</a></div><a class="btn solid" href="proposal.html">Proposal →</a></nav>
+<nav class="nav" id="nav"><b>RemotoLabs®</b><div class="links"><a href="#r3lockups">Pyramid of Light</a><a href="#r3chrome">Chrome</a><a href="#rev2">Revision 2</a><a href="#rev1">Revision 1</a></div><a class="btn solid" href="proposal.html">Proposal →</a></nav>
+
+<header class="r3hero bleed" id="r3">
+  <div class="art" aria-hidden="true"><div class="m" style="--m:url('logos/r3/lockups/now-pyramid-of-light-warm-classic.svg')"></div><img src="img/r3chrome/warm-classic-champagne.webp" alt="" onerror="this.remove()"></div>
+  <div class="in">
+    <p class="rev">Revision 3 · Pyramid of Light</p>
+    <h1>Nights of Wonder, Pyramid of Light.</h1>
+    <p class="quote">"Instead of holiday market, can we use pyramid of light (and we can remove by Rasa)"</p>
+    <p>Done: every lockup now carries Pyramid of Light, and the by-RASA line is gone. Twelve layouts on each of the three marks, all as clean outlined SVGs.</p>
+    <div class="acts"><a class="btn solid" href="#r3lockups">See the lockups</a><a class="btn" style="color:#fff;border-color:rgba(255,255,255,.4)" href="logos/r3/nights-of-wonder-pyramid-of-light-svg.zip" download>Download all SVGs (.zip)</a></div>
+  </div>
+</header>
+
+<div class="wrap">
+<section id="r3lockups">
+  <div class="sh">
+    <div><p class="eyebrow">Revision 3 · Lockups</p><h2>Twelve ways to light it.</h2></div>
+    <p>Classic stacks, an arch, a round seal, a halo of light, the Pyramid as a beacon or as bullets, script and serif versions. Pick the mark and the colour; every card downloads a clean SVG in the colour on screen.</p>
+  </div>
+  <div class="ctrl" id="r3ctrl">
+    <div class="grp" data-ctl="mark"><span class="lab">Mark</span><button class="seg" aria-pressed="true" data-v="all">All</button><button class="seg" aria-pressed="false" data-v="warm">Warm Holiday Lettering</button><button class="seg" aria-pressed="false" data-v="soft">Festive Classic, soft</button><button class="seg" aria-pressed="false" data-v="clean">Festive Classic, clean</button></div>
+    <div class="grp" data-ctl="cw"><span class="lab">Colour</span><button class="seg" aria-pressed="true" data-v="burg">Champagne on burgundy</button><button class="seg" aria-pressed="false" data-v="cream">Burgundy on cream</button><button class="seg" aria-pressed="false" data-v="black">Champagne on black</button><button class="seg" aria-pressed="false" data-v="white">Black on white</button></div>
+  </div>
+  <div class="lgrid" id="r3grid"></div>
+</section>
+
+<section id="r3chrome">
+  <div class="sh">
+    <div><p class="eyebrow">Revision 3 · Chrome</p><h2>Pyramid of Light, in chrome.</h2></div>
+    <p>The new lockups as inflated objects, in champagne for the burgundy and warm-white palette and in the silver of Midnight Sculpture.</p>
+  </div>
+  <div class="chromegrid" id="r3chromegrid"></div>
+</section>
+
+<div class="revbar" id="rev2"><div><p class="eyebrow">Earlier round</p><h2>Revision 2: Holiday Market by RASA.</h2></div><p>The first lockup system, kept as it was: the softened Festive Classic, sixty lockups with Holiday Market and Pyramid of Light signed by RASA, and the chrome studies.</p></div>
+</div>
 
 <header class="r2hero bleed" id="r2">
   <div class="r2fb" aria-hidden="true"><div class="m" style="--m:url('logos/r2/lockups/now-warm-classic-holiday.svg')"></div></div>
@@ -299,6 +350,24 @@ const CHROME = [
   ['warm-classic-holiday', 'silver', 'Warm Holiday Lettering · silver chrome', 'blk']
 ];
 document.getElementById('chromegrid').innerHTML = CHROME.map(([n, f, c, k]) => `<figure class="${k}"><img src="img/r2chrome/${n}-${f}.webp" alt="Nights of Wonder lockup, ${c}" loading="lazy" onerror="this.closest('figure').remove()"><figcaption>${c}</figcaption></figure>`).join('');
+
+/* ---------- Revision 3 ---------- */
+const R3 = { mark: 'all', cw: 'burg' }; let LOCK3 = [];
+function drawR3() {
+  const [bg, fg] = CW[R3.cw];
+  document.getElementById('r3grid').innerHTML = LOCK3.filter(o => R3.mark === 'all' || o.mark === R3.mark).map(o => `<div class="lk"><div class="art" style="--lbg:${bg};--lfg:${fg}"><div class="m" role="img" aria-label="Nights of Wonder, Pyramid of Light, ${o.markName}, ${o.layoutName}" style="--m:url('${o.file}')"></div></div>
+    <div class="cap"><div><b>${o.layoutName}</b><small>${o.markName} · ${o.note}</small></div><button class="btn dl" type="button" data-file="${o.file}" data-name="nights-of-wonder-pyramid-of-light-${o.mark}-${o.layout}">SVG</button></div></div>`).join('');
+}
+fetch('logos/r3/lockups.json').then(r => r.json()).then(m => { LOCK3 = m; drawR3(); }).catch(() => {});
+document.querySelectorAll('#r3ctrl .grp').forEach(g => g.addEventListener('click', e => {
+  const b = e.target.closest('.seg'); if (!b) return;
+  g.querySelectorAll('.seg').forEach(x => x.setAttribute('aria-pressed', x === b)); R3[g.dataset.ctl] = b.dataset.v; drawR3();
+}));
+document.getElementById('r3chromegrid').innerHTML = [
+  ['warm-classic', 'champagne', 'Warm Holiday Lettering · champagne', ''], ['soft-halo', 'silver', 'Halo · Festive Classic soft · silver', 'blk'],
+  ['clean-seal', 'champagne', 'Seal · Festive Classic clean · champagne', ''], ['warm-arch', 'silver', 'Arch · Warm Holiday Lettering · silver', 'blk'],
+  ['warm-classic', 'silver', 'Warm Holiday Lettering · silver', 'blk'], ['soft-halo', 'champagne', 'Halo · Festive Classic soft · champagne', '']
+].map(([n, f, c, k]) => `<figure class="${k}"><img src="img/r3chrome/${n}-${f}.webp" alt="Nights of Wonder, Pyramid of Light, ${c}" loading="lazy" onerror="this.closest('figure').remove()"><figcaption>${c}</figcaption></figure>`).join('');
 /* ---------- redrawn Pyramid marks (N03, N04) ---------- */
 let UID = 0;
 const P = pts => 'M' + pts.map(p => p.map(n => +n.toFixed(2)).join(' ')).join('L') + 'Z';
